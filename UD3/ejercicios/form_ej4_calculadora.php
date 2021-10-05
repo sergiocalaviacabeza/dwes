@@ -27,33 +27,41 @@
     </form>
     <?php
 
-    $numero1 = $_POST['numero1'];
-    $numero2 = $_POST['numero2'];
-    $operador = $_POST['operador'];
-
-    switch (  $_POST['operador']) {
-      case '+':
-        $resultado=$numero1+$numero2;
-        break;
-      
-      case '-':
-        $resultado=$numero1-$numero2;
-        break;  
-      
-      case '*':
-        $resultado=$numero1*$numero2;
-        break;
-      
-      case '/':
-        $resultado=$numero1/$numero2;
-          break;  
-      
-      default:
-      
-      break;
+    if(isset($_POST['numero1']) && !is_numeric($_POST['numero1'])){
+      echo "Error en el número 1 por el tipo de formato, no es numérico o está vacío";
+    } else if (isset($_POST['numero2']) && !is_numeric($_POST['numero2'])){
+      echo "Error en el número 2 por el tipo de formato, no es numérico o está vacío";
     }
-    echo " Resultado $numero1 $operador $numero2 = $resultado";
-    ?>
+      else{
+      
+      $numero1 = $_POST['numero1'];
+      $numero2 = $_POST['numero2'];
+      $operador = $_POST['operador'];
+      
+      switch (  $_POST['operador']) {
+        case '+':
+          $resultado=$numero1+$numero2;
+        break;
+        
+        case '-':
+          $resultado=$numero1-$numero2;
+        break;  
+        
+        case '*':
+          $resultado=$numero1*$numero2;
+        break;
+        
+        case '/':
+          $resultado=$numero1/$numero2;
+        break;  
+        
+        default:
+        
+        break;
+      }
+      echo " Resultado $numero1 $operador $numero2 = $resultado";
+    }
+  ?>
 </body>
 
 </html>
