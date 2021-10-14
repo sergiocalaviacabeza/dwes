@@ -29,11 +29,11 @@
     <?php
         $aciertos=0;
 
-        /*if (resp1==php){
-            aciertos ++;
-        }else if (resp2==visual){
-            aciertos ++;
-        }*/
+        if ($POST['resp1']=='php'){
+            $aciertos = $aciertos + 1;
+        }else if ($POST['resp1']=='visual'){
+            $aciertos = $aciertos + 1;
+        }
         
         echo " Resultado = $aciertos respuestas correctas";
         
