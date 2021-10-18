@@ -2,19 +2,19 @@
 
 class App
 {
-    $numeros;
+    private $numeros = array();
 
     public function run(){
         echo "Función matemática aleatoria";
         $opcion = rand(0,2);
         if ($opcion == 0){
-            echo "Cálculo números primos"
+            echo "Cálculo números primos";
             $this->primos();
         } else if ($opcion == 1){
-            echo "Serie de Fibonacci"
+            echo "Serie de Fibonacci";
             $this->fibonacci(); 
         } else {
-            echo "Potencia de 2"
+            echo "Potencia de 2";
             $this->potencia2(); 
         }
 

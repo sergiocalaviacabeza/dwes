@@ -30,7 +30,7 @@
     </form>
     
     <?php
-    if (isset($_POST['resp1']) && !empty($_POST)['resp1'])){
+    if (isset($_POST['resp1']) && !empty($_POST['resp1'])){
         echo "Error";
     } else if (isset($_POST['resp2']) && !empty($_POST['resp2'])){
       echo "Error en el número 2 por el tipo de formato, no es numérico o está vacío";
@@ -44,11 +44,10 @@
             $aciertos= $aciertos + 1;
         }else if (resp2 == visual){
             $aciertos= $aciertos + 1;
-        }
-    }
-    else {
+        }else {
         echo "No tienes ningún acierto";
     }
+
     
       echo " Resultado = $aciertos respuestas correctas";
     
