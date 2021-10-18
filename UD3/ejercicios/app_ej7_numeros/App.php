@@ -21,9 +21,9 @@ class App
     }
     
     public function primos(){
-        echo "Números primos entre 2 y 100: <br>";
+        echo "Números primos entre 2 y 10000: <br>";
 
-          for ($n = 2; $n <= 100; $n++) {
+          for ($n = 2; $n <= 10000; $n++) {
             $esPrimo = true;
             for ($i = 2; $i < $n; $i++) {
               if ($n % $i == 0) {
