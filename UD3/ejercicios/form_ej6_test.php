@@ -47,7 +47,6 @@
         }else {
         echo "No tienes ningún acierto";
     }
-
     
       echo " Resultado = $aciertos respuestas correctas";
     
