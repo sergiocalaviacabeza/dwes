@@ -5,33 +5,52 @@ class App
     private $numeros = array();
 
     public function run(){
-        echo "Función matemática aleatoria";
-        $opcion = rand(0,2);
-        if ($opcion == 0){
-            echo "Cálculo números primos";
-            $this->primos();
-        } else if ($opcion == 1){
-            echo "Serie de Fibonacci";
-            $this->fibonacci(); 
-        } else {
-            echo "Potencia de 2";
-            $this->potencia2(); 
+
+            // Recoger los argumentos de $_GET
+            // El método a ejecutar depende de un argumento $GET 
+            if (isset($_GET['method'])) {
+              $method = $_GET['method'];
+            } else {
+              //La primera vez ejecuta el método index
+              $method = 'index';
+            }
+          
+            try {
+              $this->$method();      
+            } catch (Throwable $th) {
+              if (method_exists($this, $method)) {
+                header("HTTP/1.0 500 Internal Server Error");
+                return http_response_code(500);
+                echo "Error en el servidor";
+              } else {
+                header("HTTP/1.0 404 Not Found");
+                echo "No encontrado";      
+              }  
+            } finally {
+              echo "<pre>";
+              print_r($th);
+            }                 
         }
 
-    }
+    public function index(){
+          // Incluye la vista index.php
+          // echo "Estamos en el index<br>";
+          include('views/index.php');
+        }    
     
     public function primos(){
-        echo "Números primos entre 2 y 10000: <br>";
+        echo "Números primos entre 1 y 1000: <br>";
+        
 
-          for ($n = 2; $n <= 10000; $n++) {
+          for ($n = 1; $n <= 1000; $n++) {
             $esPrimo = true;
-            for ($i = 2; $i < $n; $i++) {
+            for ($i = 1; $i < $n; $i++) {
               if ($n % $i == 0) {
                 $esPrimo = false;
-              }
+              } 
             }
             if ($esPrimo) {
-              echo "$n&nbsp;&nbsp;&nbsp;";
+              echo "$n<br>";
             }
           }
     }
@@ -40,8 +59,8 @@ class App
         $numero_anterior = 1;
         $numero_posterior = 0;
         $serie = 0;
-        $fin = 100;
-        echo "Serie de Fibonacci: ";
+        $fin = 1000;
+        echo "Serie Fibonacci: <br>";
         while ($serie < $fin){
             echo $serie . ", ";
             $serie = $numero_anterior + $numero_posterior;
@@ -50,6 +69,7 @@ class App
     }
 
     public function potencia2($numero,$potencia){
+        echo "Potencia de 2: <br>";
         $potencia = 2;
         $resultado = $numero;
         for ($i=2;$i>1; $i--){
@@ -59,5 +79,35 @@ class App
         return $numero;
     }
 
+    public function factorial($numero,$factorial){
+        echo "Factorial: <br>";
+        $factorial = 1;
+        for($i = 1; $i <= $numero; $i++){
+            $factorial = $factorial * $i;
+        }
+        return $factorial;
 
-}
+    }
+}   
+
+
+
+
+    /*echo "Función matemática aleatoria<br><br>";
+        $opcion = rand(1,4);
+        if ($opcion == 1){
+            echo "Cálculo números primos<br>";
+            $this->primos();
+        } else if ($opcion == 2){
+            echo "Serie de Fibonacci:<br><br>";
+            $this->fibonacci(); 
+        } else if ($opcion == 3){
+            echo "Potencia de 2<br>";
+            $this->potencia2(); 
+        } else if ($opcion == 4){
+            echo "Factorial:<br>";
+            $this->factorial(); 
+        }
+    */    
+
+
