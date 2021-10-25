@@ -27,11 +27,8 @@ class App {
             print_r($th);
           }                 
       }
-    
-  
-
+      
   public function login(){
-
         include('views/form.php');
     }
 
@@ -49,14 +46,6 @@ class App {
       header('location:views/home.php');
       //incrusta código, no se recarga la página por lo tanto las variables no se pierden
     }  
-
-       /* if(!isset($_COOKIE['name'])) {
-            header ('location:?method=login');
-            return;
-        }else{
-          include('views/home.php');
-        }
-        */
                 
     public function logout() {
       setcookie ('usuario', $_POST['usuario'], time() - 3600 * 24);
