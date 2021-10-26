@@ -1,56 +1,104 @@
 <?php
 
 class App {
-
-    public function run()
-    {
-        if (isset($_GET['method'])) {
-            $method = $_GET['method'];
-          } else {
-            //La primera vez ejecuta el método index
-            $method = 'login';
-          }
-        
-          try {
-            $this->$method();      
-          } catch (Throwable $th) {
-            if (method_exists($this, $method)) {
-              header("HTTP/1.0 500 Internal Server Error");
-              return http_response_code(500);
-              echo "Error en el servidor";
-            } else {
-              header("HTTP/1.0 404 Not Found");
-              echo "No encontrado";      
-            }  
-          } finally {
-            echo "<pre>";
-            print_r($th);
-          }                 
-      }
-      
-  public function login(){
-        include('views/form.php');
+  public function run()
+  {
+    if (isset($_GET['method'])) {
+      $method = $_GET['method'];
+    } else {
+      $method = 'login';
     }
+  
+    $this->$method();      
+  }
 
-    public function auth(){
-
-        setcookie ('usuario', $_POST['usuario'], time() + 3600 * 24);
-        setcookie ('clave', $_POST['clave'], time() + 3600 * 24);
-
-        header('location:?method=home');
-         //header=recarga la página, se pierden los valores de las variables, la cookie no se pierde
-
+  public function login()
+  {
+    if (isset($_COOKIE['name'])) {
+      header('Location: ?method=home');
+      return;
     }
+    include('views/login.php');
+  }
 
-    public function home() {
-      header('location:views/home.php');
-      //incrusta código, no se recarga la página por lo tanto las variables no se pierden
-    }  
-                
-    public function logout() {
-      setcookie ('usuario', $_POST['usuario'], time() - 3600 * 24);
-      setcookie ('clave', $_POST['clave'], time() - 3600 * 24);  
-
-      header('location:views/form.php');
+  public function auth()
+  {
+    //recoger datos POST
+    if (isset($_POST['name'])) {
+      $name = $_POST['name'];
+      $password = $_POST['password'];
+    } else {
+      header('Location: ?method=login');
+      return;
     }
+    //echo "xxxxx"; //al cuerpo del response. Ya no puedo usar header, ningun setcookie,....
+    //guardar en cookie
+    setcookie('name', $name, time() + 60*60*2);
+    setcookie('password', $password, time() + 60*60*2);
+    //reenviar a "home"
+    //le dice al navegador que vaya a otro sitio:
+    //http://dwes/UD3/ejemplos/13_EjemCookies/index.php?method=home
+    header('Location: index.php?method=home');
+  }
+
+  public function home()
+  {
+    if (!isset($_COOKIE['name'])) {
+      header('Location: ?method=login');
+      return;
+    }
+    if (isset($_COOKIE['deseos'])) {
+      $deseos = unserialize($_COOKIE['deseos']);
+    } else {
+      // $deseos = array();
+      $deseos = [];
+    }
+    include('views/home.php');
+  }
+
+  public function new()
+  {
+    if (!isset($_POST['new'])) {
+      header('Location: index.php?method=home');
+      return;
+    }
+    $new = $_POST['new'];
+    if (isset($_COOKIE['deseos'])) {
+      $deseos = unserialize($_COOKIE['deseos']);
+    } else {
+      $deseos = [];
+    }
+    $deseos[] = $new;
+    setcookie('deseos', serialize($deseos), time() + 60*60*2);
+    header('Location: index.php?method=home');
+  }
+
+  public function delete()
+  {
+    
+    if (isset($_COOKIE['deseos'])) {
+      $deseos = unserialize($_COOKIE['deseos']);
+    } else {
+      $deseos = [];
+    }
+    $id = $_GET['id'];
+    unset($deseos[$id]);
+    setcookie('deseos', serialize($deseos), time() + 60*60*2);
+    header('Location: index.php?method=home');
+  }
+
+  public function empty()
+  {
+    setcookie('deseos', '',  1);
+    // setcookie('deseos', '', time() - 1);
+    header('Location: index.php?method=home');    
+  }
+
+  public function close()
+  {
+    setcookie('deseos', '',  1);
+    setcookie('name', '',  1);
+    setcookie('password', '',  1);
+    header('Location: index.php?method=login');
+  }
 }
