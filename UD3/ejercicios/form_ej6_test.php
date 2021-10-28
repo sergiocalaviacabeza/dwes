@@ -41,7 +41,7 @@
         $aciertos=0;
         if ($resp1 == 'php'){
             $aciertos= $aciertos + 1;
-        }else if ($resp2 == 'visual'){
+        }if ($resp2 == 'visual'){
             $aciertos= $aciertos + 1;
         }else {
         echo "No tienes ningún acierto<br><br>";
