@@ -24,7 +24,6 @@ class App {
             }  
           } finally {
             echo "<pre>";
-            print_r($th);
           }                 
       }
     
@@ -46,7 +45,7 @@ class App {
     }
 
     public function home() {
-      header('location:views/home.php');
+      include('views/home.php');
       //incrusta código, no se recarga la página por lo tanto las variables no se pierden
     }  
 
@@ -62,6 +61,6 @@ class App {
       setcookie ('usuario', $_POST['usuario'], time() - 3600 * 24);
       setcookie ('clave', $_POST['clave'], time() - 3600 * 24);  
 
-      header('location:views/form.php');
+      header('location:?method=login');
     }
 }

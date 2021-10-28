@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Bienvendo</h1>
-    <form method="POST" action="../index.php?method=logout">
+    <h1>Bienvenido</h1>
+    <form method="POST" action="index.php?method=logout">
         <input type="submit" value="cerrar sesion"><br>
     </form>
 </body>
