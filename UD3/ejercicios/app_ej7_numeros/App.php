@@ -40,18 +40,17 @@ class App
     
     public function primos(){
         echo "Números primos entre 1 y 1000: <br>";
-        
-
+          $contador = 0;
           for ($n = 1; $n <= 1000; $n++) {
-            $esPrimo = true;
             for ($i = 1; $i < $n; $i++) {
               if ($n % $i == 0) {
-                $esPrimo = false;
+                $contador = $contador +1;
               } 
             }
-            if ($esPrimo) {
-              echo "$n<br>";
+            if ($contador==2) {
+              echo $n . ", ";
             }
+            $contador=0;
           }
     }
 
@@ -68,18 +67,17 @@ class App
         }
     }
 
-    public function potencia2($numero,$potencia){
-        echo "Potencia de 2: <br>";
-        $potencia = 2;
-        $resultado = $numero;
-        for ($i=2;$i>1; $i--){
-            $resultado = $resultado * $numero;
+    public function potencia2(){
+        echo "Potencia de 2 - valores hasta 2 elevado a 24: <br>";
+
+        for ($i=1;$i<=24; $i++){
+            $resultado = pow (2,$i);
+            echo $resultado . ", ";
         }
-        $numero = $resultado;
-        return $numero;
+
     }
 
-    public function factorial($numero,$factorial){
+    public function factorial(){
         echo "Factorial: <br>";
         $factorial = 1;
         for($i = 1; $i <= $numero; $i++){
