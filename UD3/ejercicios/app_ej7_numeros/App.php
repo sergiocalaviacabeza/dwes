@@ -80,15 +80,16 @@ class App
     public function factorial(){
         echo "Factorial: <br>";
         $factorial = 1;
-        for($i = 1; $i <= $numero; $i++){
+        for($i = 1; $i < 1000000; $i++){
             $factorial = $factorial * $i;
+            if ($factorial < 1000000){
+              echo $factorial . ", ";
+            }
+            
         }
-        return $factorial;
 
     }
 }   
-
-
 
 
     /*echo "Función matemática aleatoria<br><br>";
