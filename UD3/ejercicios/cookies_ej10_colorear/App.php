@@ -28,12 +28,10 @@ class App {
 
   public function cambio()
   { 
-
     //coger el color seleccionado por el usuario de $GET o $_POST
-    $colores[] = $new;
-    setcookie('color', serialize($colores), time() + 60*60*2);
+    $new = $_POST['color'];
+    setcookie('color', $new, time() + 60*60*2);
     header('Location: ?method=home');
-
   }
 
 }
