@@ -9,7 +9,7 @@
   <h1>Hecho!</h1>
   
   <hr>
-  <h2>Cambiar el color del fondo de la página</h2>
+  <h2>Cambiado el color del fondo de la página</h2>
   <form action="?method=cambio" method="post">
     <input type="submit" value="volver">
   </form>

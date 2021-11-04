@@ -12,11 +12,11 @@
   Elige un color:  <br>
         <select name="color">
          <optgroup label="Grupo de colores">
-           <option selected>red</option>
-           <option>blue</option>
-           <option>green</option>
-           <option>yellow</option>
-           <option >violet</option>
+           <option selected value="red">rojo</option>
+           <option value="blue">azul</option>
+           <option value="green">verde</option>
+           <option value="yellow">amarillo</option>
+           <option value="violet">violeta</option>
          </optgroup>
        </select>
        <br>
