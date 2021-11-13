@@ -24,7 +24,6 @@ class App {
             }  
           } finally {
             echo "<pre>";
-            print_r($th);
           }                 
       }
     
@@ -40,19 +39,20 @@ class App {
         setcookie ('usuario', $_POST['usuario'], time() + 3600 * 24);
         setcookie ('clave', $_POST['clave'], time() + 3600 * 24);
 
+        header('location:?method=home');
+         //header=recarga la página, se pierden los valores de las variables, la cookie no se pierde
 
     }
 
-    public function home(){
-        if(!isset($_COOKIE['name'])){
-            header ('location:? method=login');
-            return;
-        }
-        include('views/home.php');
+    public function home() {
+      include('views/home.php');
+      //incrusta código, no se recarga la página por lo tanto las variables no se pierden
+    }  
+                
+    public function logout() {
+      setcookie ('usuario', $_POST['usuario'], time() - 3600 * 24);
+      setcookie ('clave', $_POST['clave'], time() - 3600 * 24);  
 
-
+      header('location:?method=login');
     }
-
-
-
 }
