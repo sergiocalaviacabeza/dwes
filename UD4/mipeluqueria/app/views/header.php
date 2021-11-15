@@ -12,19 +12,23 @@
       <li class="nav-item active">
         <a class="nav-link" href="<?= PATH."/employee"?>">Trabajadores</a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="<?= PATH."/login"?>">Login Usuarios</a>
+      </li>
+    </ul>  
 <!--
       <li class="nav-item active">
         <a class="nav-link" href="/login">Login</a>
       </li>
- -->
+
       </ul>
 
-    <!-- nuevo -->
-    <ul class="navbar-nav">
+      <ul class="navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="<?= PATH."/login"?>">Login</a>
       </li>
     </ul>
+    -->
   </div>
 </nav>
 

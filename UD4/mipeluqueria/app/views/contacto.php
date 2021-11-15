@@ -14,7 +14,7 @@
       <label>Correo: </label><input type="text" value="" name="correo"> <br>
       <label>Asunto: </label><input type="text" value="" name="asunto"> <br>
       <label>Mensaje: </label><input type="text" value="" name="mensaje"> <br>
-      <input type="submit" href="name=FromularioController&method=recogerTrabajador" value="enviar">
+      <input type="submit" href="name=FromularioController&method=recogerContacto" value="enviar">
     </form>
 
 
