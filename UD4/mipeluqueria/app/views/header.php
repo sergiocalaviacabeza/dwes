@@ -15,6 +15,8 @@
       <li class="nav-item active">
         <a class="nav-link" href="<?= PATH."/login"?>">Login Usuarios</a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="<?= PATH."/mostrar_contacto"?>">Mostrar</a>
     </ul>  
 <!--
       <li class="nav-item active">

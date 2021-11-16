@@ -8,7 +8,7 @@
 <body>
   <?php require "app/views/header.php" ?>
       <h1>Formulario Ficha de Trabajadores</h1>
-      <form method="GET">
+      <form method="POST" action="<?= PATH . "/formulario/recogerTrabajador" ?>>
         <label>Nombre: </label><input type="text" value="" name="nombre_trab" > <br>
         <label>Apellidos: </label><input type="text" value="" name="apellidos_trab"> <br>
         <label>Teléfono: </label><input type="text" value="" name="telefono_trab" > <br>

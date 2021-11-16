@@ -32,6 +32,6 @@ class FormularioController
         $_SESSION['usuario']=$_POST['usuario'];
         $_SESSION['password']=$_POST['password'];
 
-        require "app/views/mostrar_contacto.php";
+        require "app/views/mostrar_login.php";
     }
 }

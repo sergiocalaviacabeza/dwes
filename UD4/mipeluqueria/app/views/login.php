@@ -8,7 +8,7 @@
 <body>
   <?php require "app/views/header.php" ?>
       <h1>Login</h1>
-      <form method="GET">
+      <form method="POST" action="<?= PATH . "/consulta/recogerLogin" ?>">
         <label>Usuario: </label><input type="text" value="" name="usuario" > <br>
         <label>Password: </label><input type="text" value="" name="password"> <br>
         

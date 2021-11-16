@@ -4,6 +4,7 @@
         <title>Formulario</title>
     </head>
     <body>
+    <?php require "app/views/header.php" ?>
         <h1>Datos trabajador</h1>
         <ul>
             <li>Nombre: <?= $_SESSION['nombre_trab']?></li>
