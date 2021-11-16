@@ -13,8 +13,8 @@ class App
         // vamos a usar la url de la siguiente manera:
         // controlador/metodo/argumentos
         $arguments = explode('/', trim($url, '/'));
-        $nameController = array_shift($arguments);
-        $nameController = ucwords($nameController) . "Controller";
+        $controllerName= array_shift($arguments);
+        $controllerName = ucwords($controllerName) . "Controller";
         if (count($arguments)) {
             $method =  array_shift($arguments);
         } else {
@@ -23,15 +23,15 @@ class App
 
          echo "App - Url: $url <br>";
 
-        $file = "app/controllers/$nameController" . ".php";
+        $file = "app/controllers/$controllerName" . ".php";
         if (file_exists($file)) {
             require_once $file;
         } else {
             header("HTTP/1.0 404 Not Found");
             die();
         }
-        $controllerObject = new $nameController;
-        if (method_exists($nameController, $method)) {
+        $controllerObject = new $controllerName;
+        if (method_exists($controllerName, $method)) {
             $controllerObject->$method($arguments);
         } else {
             header("HTTP/1.0 404 Not Found");
