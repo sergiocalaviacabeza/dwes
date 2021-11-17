@@ -56,5 +56,5 @@ INSERT INTO `servicios` (`ID`, `SERVICIO`, `DESCRIPCION`, `TIEMPO`, `PRECIO`) VA
 (2, 'RESTAURADOR', 'Recupera y fortalece el cabello', '30', '50'),
 (3, 'INFOACTIVO', 'Actúa en la raíz', '30', '70'),
 (4, 'PROTEÍNAS', 'Rellena de materia el cabello', '50', '100'),
-(5, 'DETOX ORO', 'Descongestiona e hidrata cuero cabelludo', '30', '50')
+(5, 'DETOX ORO', 'Descongestiona e hidrata cuero cabelludo', '30', '100')
 ;
