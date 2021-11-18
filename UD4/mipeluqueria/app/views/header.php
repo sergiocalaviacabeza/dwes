@@ -17,7 +17,10 @@
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="<?= PATH."/mostrar_contacto"?>">Mostrar</a>
-      </li>  
+      </li> 
+      <li class="nav-item active">
+        <a class="nav-link" href="<?= PATH."/servicios"?>">Servicios Peluqueria</a>
+      </li>   
     </ul>  
 <!--
       <li class="nav-item active">
@@ -28,7 +31,7 @@
 
       <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="<?= PATH."/login"?>">Login</a>
+        <a class="nav-link" href=">Login</a>
       </li>
     </ul>
     -->

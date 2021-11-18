@@ -11,11 +11,11 @@ require_once 'core/Model.php';
 * Hereda de models
 * No es necesario definir los atributos, PHP permite definirlos durante la ejecución
 */
-class Employee extends Model
+class Servicios extends Model
 {
     public static function all(){ 
          //obtener conexión
-         $db = Employee::db();
+         $db = Servicios::db();
          //preparar consulta
          $sql = "SELECT * FROM servicios";
          //ejecutar
@@ -23,9 +23,9 @@ class Employee extends Model
          //el resultado puede ser tomado usan las funciones de de PDO
          //fetch recoge registro a registro. Si hay muchos requiere un bucle
          //fetch_all recoge arrays
-         $users = $statement->fetchAll(PDO::FETCH_CLASS, Employee::class);
+         $users = $statement->fetchAll(PDO::FETCH_CLASS, Servicios::class);
          //retornar
-         return $users;       
+         return $servicios;       
     }
     public static function find($id){ 
         //TODO        

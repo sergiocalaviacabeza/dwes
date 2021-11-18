@@ -30,6 +30,7 @@ class App
             header("HTTP/1.0 404 Not Found");
             die();
         }
+        $controllerName = '\\App\\Controllers\\' . $controllerName;
         $controllerObject = new $controllerName;
         if (method_exists($controllerName, $method)) {
             $controllerObject->$method($arguments);

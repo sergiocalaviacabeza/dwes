@@ -1,23 +1,23 @@
 <?php
 namespace App\Controllers;
 
-require_once "app/models/User.php";
-use App\Models\User;
+require_once "app/models/Servicios.php";
+use App\Models\Servicios;
 /**
 *
 */
-class UserController
+class ServiciosController
 {
 
     function __construct()
     {
-        // echo "En UserController";
+        // echo "En ServiciosController";
     }
 
     public function index()
     {
         //buscar datos
-        $users = Employee::all();
+        $servicios = Servicios::all();
         //pasar a la vista
         require('app/views/user/index.php');
     }
@@ -26,7 +26,7 @@ class UserController
     {
         // $id = (int) $args[0];
         list($id) = $args;
-        $user = Employee::find($id);
+        $servicios = Servicios::find($id);
         // var_dump($user);
         // exit();
         require('app/views/user/show.php');        
