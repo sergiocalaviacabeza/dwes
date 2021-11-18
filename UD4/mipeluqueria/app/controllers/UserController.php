@@ -17,7 +17,7 @@ class UserController
     public function index()
     {
         //buscar datos
-        $users = User::all();
+        $users = Employee::all();
         //pasar a la vista
         require('app/views/user/index.php');
     }
@@ -26,7 +26,7 @@ class UserController
     {
         // $id = (int) $args[0];
         list($id) = $args;
-        $user = User::find($id);
+        $user = Employee::find($id);
         // var_dump($user);
         // exit();
         require('app/views/user/show.php');        

@@ -17,6 +17,7 @@
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="<?= PATH."/mostrar_contacto"?>">Mostrar</a>
+      </li>  
     </ul>  
 <!--
       <li class="nav-item active">

@@ -11,23 +11,25 @@
 
   <main role="main" class="container">
     <div class="starter-template">
-      <h1>Lista de usuarios</h1>
+      <h1>Lista de servicios</h1>
 
       <table class="table table-striped table-hover">
         <tr>
-          <th>Nombre</th>
-          <th>Apellidos</th>
-          <th>Email</th>
-          <th>F. nacimiento</th>
+          <th>ID</th>
+          <th>SERVICIO</th>
+          <th>DESCRIPCION</th>
+          <th>TIEMPO</th>
+          <th>PRECIO</th>
           <th></th>
         </tr>
 
-        <?php foreach ($users as $key => $user) { ?>
+        <?php foreach ($servicios as $key => $employee) { ?>
           <tr>
-          <td><?php echo $user->name ?></td>
-          <td><?php echo $user->surname ?></td>
-          <td><?php echo $user->email ?></td>
-          <td><?php echo $user->birthdate ? $user->birthdate->format('d-m-Y') : 'nonato' ?></td>
+          <td><?php echo $employee->id ?></td>
+          <td><?php echo $employee->servicio ?></td>
+          <td><?php echo $employee->descripcion ?></td>
+          <td><?php echo $employee->tiempo ?></td>
+          <td><?php echo $employee->precio ?></td>
           <td>
             <a href="<?= PATH."/user/show/".$user->id ?>" class="btn btn-primary">Ver </a>
           </td>
