@@ -1,18 +1,17 @@
 <?php
-
 namespace App\Controllers;
-
 
 class HomeController
 {
 
     function __construct()
     {
-        //echo "HomeController -> construct <br>";
+        // echo "En HomeController";
     }
 
     public function index()
     {
+        // echo "<p>En Index()</p>";
         require "app/views/home.php";
     }
 }

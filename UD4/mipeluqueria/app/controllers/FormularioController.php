@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Controllers;
+
 class FormularioController
 {
     function __construct()

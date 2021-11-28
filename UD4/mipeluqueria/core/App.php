@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 class App
 {
 
@@ -21,7 +23,7 @@ class App
             $method = "index";
         }
 
-         echo "App - Url: $url <br>";
+        //  echo "App - Url: $url <br>";
 
         $file = "app/controllers/$controllerName" . ".php";
         if (file_exists($file)) {

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use PDO;
@@ -23,20 +24,53 @@ class Servicios extends Model
          //el resultado puede ser tomado usan las funciones de de PDO
          //fetch recoge registro a registro. Si hay muchos requiere un bucle
          //fetch_all recoge arrays
-         $users = $statement->fetchAll(PDO::FETCH_CLASS, Servicios::class);
+
+         $servicios = $statement->fetchAll(PDO::FETCH_CLASS, Servicios::class);
+        //  echo "<pre>";
+        //  var_dump ($servicios); exit();
          //retornar
          return $servicios;       
     }
     public static function find($id){ 
-        //TODO        
+
+        $db = Servicios::db();
+        $statement = $db->prepare('SELECT * FROM servicios WHERE id=:id');
+        $statement->execute(array(':id' => $id));
+        //Para cargar un objeto User debemos usar setFetchMode y fetch
+        $statement->setFetchMode(PDO::FETCH_CLASS, Servicios::class);
+        $servicios = $statement->fetch(PDO::FETCH_CLASS);
+    
+        return $servicios;      
     }
-    public function insert(){ 
-        //TODO        
+    
+    public function insert()
+    {
+        $db = Servicios::db();
+        $stmt = $db->prepare('INSERT INTO servicios(id, servicio, descripcion, tiempo, precio) VALUES(:id, :servicio, :descripcion, :tiempo, :precio)');
+        $stmt->bindValue(':id', $this->id);
+        $stmt->bindValue(':servicio', $this->servicio);
+        $stmt->bindValue(':descripcion', $this->descripcion);
+        $stmt->bindValue(':tiempo', $this->tiempo);
+        $stmt->bindValue(':precio', $this->precio);
+        return $stmt->execute();
     }
+
+    public function save()
+    {
+        $db = Servicios::db();
+        $stmt = $db->prepare('UPDATE servicios SET id = :id, servicio = :servicio, descripcion = :descripcion, tiempo = :tiempo, precio = :precio WHERE id = :id');
+        $stmt->bindValue(':id', $this->id);
+        $stmt->bindValue(':servicio', $this->servicio);
+        $stmt->bindValue(':descripcion', $this->descripcion);
+        $stmt->bindValue(':tiempo', $this->tiempo);
+        $stmt->bindValue(':precio', $this->precio);
+        return $stmt->execute();
+    }
+    
     public function delete(){ 
-        //TODO        
-    }
-    public function save(){ 
-        //TODO        
+        $db = Servicios::db();
+        $stmt = $db->prepare('DELETE FROM servicios WHERE id = :id');
+        $stmt->bindValue(':id', $this->id);
+        return $stmt->execute();
     }
 }
