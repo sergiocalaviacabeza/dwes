@@ -1,6 +1,12 @@
 <?php
 
 class App {
+
+  public function __construct()
+  {
+    session_start();
+  }
+
   public function run()
   {
     if (isset($_GET['method'])) {
@@ -19,6 +25,28 @@ class App {
     }
   
     include('views/home.php');
+  }
+
+  public function ejemplo1()
+  {
+    $ancho = $_GET['ancho'];
+    $alto = $_GET['alto'];
+    $_SESSION['ancho']=$ancho; //meter en la sesión una variable
+    $_SESSION['alto']=$alto;
+    $_SESSION['superficie']=$ancho*$alto;
+  }
+
+  public function ejemplo2()
+  {
+    $superficie = $_SESSION['superficie'];
+
+    echo "La superficie guardada es" . $superficie;
+
+    echo "La superficie guardada es" . $_SESSION['superficie'];
+
+    unset ($_SESSION['superficie']); //todo lo que sean funciones siempre entre paréntesis
+
+    session_destroy(); 
   }
 
   public function colores()
