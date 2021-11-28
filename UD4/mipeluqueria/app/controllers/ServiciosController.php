@@ -29,6 +29,34 @@ class ServiciosController
         require 'app/views/servicios/create.php';
     }
 
+    public function upload()
+    {
+        require 'app/views/servicios/upload.php';
+    }
+
+    public function uploading()
+    {
+        echo "Nombre del fichero".$_FILES["fichero1"]["name"];
+        echo "<br>Nombre temporal del fichero en el servidor".$_FILES["fichero1"]["tmp_name"];
+
+        // hay que crear el directorio
+        $res1 = move_uploaded_file ($_FILES["fichero1"]["tmp_name"], "subidos/".$_FILES["fichero1"]["name"]);
+
+
+        echo "Nombre del fichero".$_FILES["fichero2"]["name"];
+        echo "<br>Nombre temporal del fichero en el servidor".$_FILES["fichero2"]["tmp_name"];
+
+        // hay que crear el directorio
+        $res2 = move_uploaded_file ($_FILES["fichero2"]["tmp_name"], "subidos/".$_FILES["fichero2"]["name"]);
+
+        if ($res1 && $res2) {
+            echo "<br>Fichero guardado";
+        } else {
+            echo "<br>Error";
+        }
+        
+    }
+
     public function store()
     {
         //echo "hola"; exit(); para saber si llega
@@ -78,5 +106,7 @@ class ServiciosController
         //var_dump($servicio);exit();
         $servicio->delete();//funcion delete en models/servicios.php 
         header('Location:'.PATH.'/servicios');
-    }   
+    }
+    
+    
 }

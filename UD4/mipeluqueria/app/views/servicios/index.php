@@ -22,6 +22,7 @@
           <th>PRECIO</th>
           <th></th>
         </tr>
+
        
         <?php 
         
@@ -42,8 +43,13 @@
           </tr>
         <?php } ?>
       </table>
-
+      <h3>Subir fotos de los servicios de la peluquería</h3>
+      <p><a href="<?= PATH."/servicios/upload/"?>" class="btn btn-primary">Subir</a></p>
     </div>
+
+    <hr>
+
+
 
   </main><!-- /.container -->
   <?php require "app/views/parts/footer.php" ?>
