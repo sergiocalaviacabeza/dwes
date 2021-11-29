@@ -14,7 +14,7 @@
 
     <h1>Subida archivos</h1>
     
-      <form method="post" action="<?= PATH."/servicios/uploading"?>">
+      <form method="post" enctype="multipart/form-data" action="<?= PATH."/servicios/uploading"?>">
 
           Selecciona las fotos para subir<br><br>
         <input type="file" name="fichero1"><br><br>
