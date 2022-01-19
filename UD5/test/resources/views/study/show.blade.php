@@ -20,7 +20,7 @@
         </li>
         <li>
             <strong>Abreviatura</strong>
-            {{ $study->abreviation }}
+            {{ $study->abrevation }}<!--Nota aquí para que funcione lo he cambiado por abrevation, ponía abreviation-->
         </li>
     </ul>
 </body>

@@ -17,7 +17,7 @@ class CreateStudiesTable extends Migration
             $table->id();
             $table->string('code', 6)->unique();
             $table->string('name');
-            $table->string('abrevation');
+            $table->string('abreviation');
             $table->timestamps();
         });
     }

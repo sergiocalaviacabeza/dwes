@@ -20,7 +20,7 @@
 <tr>
     <td>{{$study->code}} </td>
     <td>{{$study->name}} </td>
-    <td>{{$study->abreviation}} </td>
+    <td>{{$study->abrevation}} </td><!--Nota aquí para que funcione lo he cambiado por abrevation, ponía abreviation-->
     <td> <a href="/studies/{{$study->id}}">Ver</a></td>
 </tr>
 @empty
