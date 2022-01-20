@@ -1,34 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+@extends('layouts.app')
 
-<h1>Lista de estudios</h1>
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
 
 
-<table border="1">
-<tr>
-    <th>Código</th>
-    <th>Nombre</th>
-    <th>Abreviatura</th>
-</tr>
-@forelse ($studies as $study)
-<tr>
-    <td>{{$study->code}} </td>
-    <td>{{$study->name}} </td>
-    <td>{{$study->abrevation}} </td><!--Nota aquí para que funcione lo he cambiado por abrevation, ponía abreviation-->
-    <td> <a href="/studies/{{$study->id}}">Ver</a></td>
-</tr>
-@empty
-<tr>
-    <td colspan="3">No hay estudios registrados</td>
-</tr>
-@endforelse
-</table>
+        <h1>Lista de estudios
+            <a href="/studies/create" class="btn btn-primary float-right">
+                Nuevo
+            </a>
+        </h1>
 
-</body>
-</html>
+
+        <table class="table table-striped">
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Abreviatura</th>
+        </tr>
+        @forelse ($studies as $study)
+        <tr>
+            <td>{{$study->code}} </td>
+            <td>{{$study->name}} </td>
+            <td>{{$study->abrevation}} </td><!--Nota aquí para que funcione lo he cambiado por abrevation-->
+            <td> <a class="btn btn-primary btn-sm" href="/studies/{{$study->id}}">Ver</a></td>
+            <td> <a class="btn btn-primary btn-sm" href="/studies/{{$study->id}}/edit">Editar</a></td>
+        </tr>
+        @empty
+        <tr>
+            <td colspan="3">No hay estudios registrados</td>
+        </tr>
+        @endforelse
+        </table>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+@endsection
+
+
+
+

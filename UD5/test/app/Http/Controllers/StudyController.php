@@ -26,7 +26,7 @@ class StudyController extends Controller
      */
     public function create()
     {
-        //
+        return view('study.create');
     }
 
     /**
@@ -38,6 +38,9 @@ class StudyController extends Controller
     public function store(Request $request)
     {
         //
+        $study = Study::create($request->all());
+
+        return redirect ('/studies');
     }
 
     /**
@@ -57,9 +60,9 @@ class StudyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Study $study)
     {
-        //
+        return view('study.edit', ['study'=> $study]);
     }
 
     /**
@@ -71,7 +74,7 @@ class StudyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
