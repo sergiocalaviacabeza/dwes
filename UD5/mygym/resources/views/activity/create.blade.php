@@ -1,12 +1,16 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="es">
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-        <h1>Creación de Actividades</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Documento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-        <form action="/activities" method="post">
+<body>
+    <h1>Creación de Actividades</h1>
+
+    <form action="/activities" method="post">
         @csrf
         <div>
             <label for="name">Nombre</label>
@@ -29,11 +33,12 @@
         </div>
 
         <div>
-            <input type="submit" value="crear"> 
-        </div>        
-        </form>
-        </div>
-    </div>
+            <input type="submit" value="Crear"> 
+        </div>    
+    </form><br>
+    <a href="/activities" class="btn btn-primary float-right">
+                Volver
+    </a>    
+</body>
 
-</div>
-@endsection
+</html>

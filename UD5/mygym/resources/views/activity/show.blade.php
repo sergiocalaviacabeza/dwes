@@ -26,5 +26,9 @@
             {{ $activity->maximum }}
         </li>
     </ul>
+    <br>
+    <a href="/activities" class="btn btn-primary float-right">
+                Volver
+    </a>    
 </body>
 </html>

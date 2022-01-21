@@ -71,9 +71,11 @@ class ActivityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Activity $activity)
     {
-        //
+        $activity->fill($request->all());
+        $activity->save();
+        return redirect('/activities');
     }
 
     /**
