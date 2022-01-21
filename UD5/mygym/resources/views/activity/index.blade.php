@@ -36,6 +36,9 @@
 </tr>
 @endforelse
 </table>
-
+<br>
+<a href="/" class="btn btn-primary float-right">
+                Inicio
+    </a>
 </body>
 </html>
