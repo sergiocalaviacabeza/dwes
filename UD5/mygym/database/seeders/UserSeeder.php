@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             'password' => 'alumno',
             'weight' => '75',
             'height' => '1,75',
-            'birthday' => '2000/12/12',
+            'date' => '2000/12/12',
             'sex' => 'Masculino'
         ]);
     }

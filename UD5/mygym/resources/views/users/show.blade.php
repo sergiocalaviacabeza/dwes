@@ -6,28 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Actividades mygym</h1>
+    <h1>Socios mygym</h1>
 
     <ul>
         <li>
-            <strong>Nombre Actividad</strong>
-            {{ $activity->name }}
+            <strong>DNI</strong>
+            {{ $user->dni }}
         </li>
         <li>
-            <strong>Descripción</strong>
-            {{ $activity->description }}
+            <strong>Nombre completo</strong>
+            {{ $user->name }}
         </li>
         <li>
-            <strong>Duración (minutos)</strong>
-            {{ $activity->duration }}
+            <strong>Peso</strong>
+            {{ $user->weight }}
         </li>
         <li>
-            <strong>Número máximo de participantes</strong>
-            {{ $activity->maximum }}
+            <strong>Altura</strong>
+            {{ $user->height }}
+        </li>
+        <li>
+            <strong>Fecha de Nacimiento</strong>
+            {{ $user->date }}
+        </li>
+        <li>
+            <strong>Sexo</strong>
+            {{ $user->sex }}
         </li>
     </ul>
     <br>
-    <a href="/activities" class="btn btn-primary float-right">
+    <a href="/users" class="btn btn-primary float-right">
                 Volver
     </a>    
 </body>

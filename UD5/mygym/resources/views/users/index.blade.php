@@ -7,28 +7,32 @@
 </head>
 <body>
 
-<h1>Lista de Actividades
+<h1>Lista de Socios
 </h1>
 
 <a href="/users/create" class="btn btn-primary float-right">
-                Añadir Nueva Actividad
+                Añadir Nuevo Socio
     </a><br><br>
 
 <table border="1">
 <tr>
-    <th>Nombre</th>
-    <th>Descripción</th>
-    <th>Duración (minutos)</th>
-    <th>Máximo participantes</th>
+    <th>DNI</th>
+    <th>Nombre completo</th>
+    <th>Peso</th>
+    <th>Altura</th>
+    <th>Fecha de Nacimiento</th>
+    <th>Sexo</th>
 </tr>
-@forelse ($activities as $activity)
+@forelse ($users as $user)
 <tr>
-    <td>{{$activity->name}} </td>
-    <td>{{$activity->description}} </td>
-    <td>{{$activity->duration}} </td>
-    <td>{{$activity->maximum}} </td>
-    <td> <a href="/activities/{{$activity->id}}">Ver</a></td>
-    <td> <a href="/activities/{{$activity->id}}/edit">Editar</a></td>
+    <td>{{$user->dni}} </td>
+    <td>{{$user->name}} </td>
+    <td>{{$user->weight}} </td>
+    <td>{{$user->height}} </td>
+    <td>{{$user->date}} </td>
+    <td>{{$user->sex}} </td>
+    <td> <a href="/users/{{$user->id}}">Ver</a></td>
+    <td> <a href="/users/{{$user->id}}/edit">Editar</a></td>
 </tr>
 @empty
 <tr>

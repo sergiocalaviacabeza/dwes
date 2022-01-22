@@ -9,29 +9,38 @@
 
 <body>
 
-    <h1>Editar Actualizar Actividades</h1>
+    <h1>Editar Actualizar Socio</h1>
 
-    <form action="/activities/{{$activity->id}}" method="post">
+    <form action="/users/{{$user->id}}" method="post">
         @csrf
         <input type="hidden" name="_method" value="PUT">
         <div>
-            <label for="name">Nombre</label>
-            <input type="text" name="name" value="{{$activity->name}}"> 
+            <label for="dni">DNI</label>
+            <input type="text" name="dni"> 
+        </div>
+        <div>
+            <label for="name">Nombre completo</label>
+            <input type="text" name="name"> 
         </div>
 
         <div>
-            <label for="description">Descripción</label>
-            <input type="text" name="description" value="{{$activity->description}}"> 
+            <label for="weight">Peso</label>
+            <input type="text" name="weight"> 
         </div>
 
         <div>
-            <label for="duration">Duración (minutos)</label>
-            <input type="text" name="duration" value="{{$activity->duration}}"> 
+            <label for="height">Altura</label>
+            <input type="text" name="height"> 
         </div>
 
         <div>
-            <label for="maximum">Número máximo de participantes</label>
-            <input type="text" name="maximum" value="{{$activity->maximum}}"> 
+            <label for="date">Fecha de Nacimiento</label>
+            <input type="text" name="date"> 
+        </div>
+        
+        <div>
+            <label for="sex">Sexo</label>
+            <input type="text" name="sex"> 
         </div>
 
         <div>
@@ -39,7 +48,7 @@
         </div>        
     </form>
     <br>
-    <a href="/activities" class="btn btn-primary float-right">
+    <a href="/users" class="btn btn-primary float-right">
                 Volver
     </a>    
 
