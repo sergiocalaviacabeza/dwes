@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudyController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,9 @@ Route::get('prueba2', [PruebaController::class, 'hola']);
 Route::get('prueba2/{name}',[PruebaController::class, 'saludoCompleto']);
 
 Route::resource('studies', StudyController::class);
+Route::resource('users', UserController::class);
+Route::resource('roles', RoleController::class);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
