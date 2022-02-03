@@ -9,8 +9,12 @@ class Role extends Model
 {
     use HasFactory;
     
-    public function users(){
+    /*public function users(){
         return $this->hasMany(User::class);
+    }relación 1 a n lo comentamos para que no dé error*/
+
+    public function users(){
+        return $this->belongsToMany(User::class);
     }
 }
 

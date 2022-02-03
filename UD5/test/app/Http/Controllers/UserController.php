@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Role;
 
 class UserController extends Controller
 {
@@ -14,6 +15,17 @@ class UserController extends Controller
      */
     public function index()
     {
+      
+        $this->addRole();
+
+    }
+
+    public function addRole()
+    {
+        //Necesitamos id_usuario que ponemos el 1, e id_role
+        $user = User::find(1);
+        $role = Role::find(1);
+        $user->addRole($role);
         $users = User::all();
         return view('user.index', ['users'=> $users]);
 
