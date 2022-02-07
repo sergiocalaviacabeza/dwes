@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::get('prueba2', [PruebaController::class, 'hola']);
 Route::get('prueba2/{name}',[PruebaController::class, 'saludoCompleto']);
-
+Route::get('/studies/filter', [StudyController::class, 'filter']);
 Route::resource('studies', StudyController::class);
 Route::resource('users', UserController::class);
 Route::resource('roles', RoleController::class);
