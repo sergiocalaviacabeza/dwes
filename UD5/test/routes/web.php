@@ -27,6 +27,12 @@ Route::resource('studies', StudyController::class);
 Route::resource('users', UserController::class);
 Route::resource('roles', RoleController::class);
 
+Route::resource('studies', StudyController::class)->middleware('auth');
+Route::get('prueba',function(){
+    return "has accedido correctamente a esta ruta";
+})->middleware('role');
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
