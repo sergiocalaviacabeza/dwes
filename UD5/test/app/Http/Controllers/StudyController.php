@@ -104,4 +104,15 @@ class StudyController extends Controller
         //y devuelve JSON 
         return $studies; 
     }
+
+    /*
+    public function filter (Request $request){
+        $filter = $request->filter;
+
+        $studies = Study::where('name','LIKE', "%$filter%")->get();
+        
+        
+        return view('study.index', ['studies' => $studies]);
+    }
+    */
 }
