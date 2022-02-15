@@ -20,7 +20,10 @@
 
         <div>
             <label for="abreviation">Abreviatura</label>
-            <input type="text" name="abreviation"> 
+            <input type="text" name="abreviation" value="{{ old('abrevation') }}"> 
+            @error('abreviation')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
 
         <div>

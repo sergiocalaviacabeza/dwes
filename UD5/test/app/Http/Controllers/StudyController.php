@@ -38,6 +38,14 @@ class StudyController extends Controller
     public function store(Request $request)
     {
         //
+
+        $rules = [
+            'code'=> 'required|max:6',
+            'name'=>'required',
+            'abreviation'=>'required',
+        ];
+        $request->validate($rules);
+
         $study = Study::create($request->all());
 
         return redirect ('/studies');
