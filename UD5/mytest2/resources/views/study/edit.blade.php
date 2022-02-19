@@ -8,9 +8,10 @@
 </head>
 
 <body>
-        <h1>Actualización de estudios</h1>
 
-        <form action="/studies/{{$study->id}}" method="post">
+    <h1>Editar Actualizar Estudios</h1>
+
+    <form action="/studies/{{$study->id}}" method="post">
         @csrf
         <input type="hidden" name="_method" value="PUT">
         <div>
@@ -31,9 +32,12 @@
         <div>
             <input type="submit" value="Actualizar"> 
         </div>        
-        </form>
-        </div>
-    </div>
+    </form>
+    <br>
+    <a href="/activities" class="btn btn-primary float-right">
+                Volver
+    </a>    
 
-</div>
-@endsection
+</body>
+
+</html>

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Documento</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudios</title>
 </head>
-
 <body>
-    <h1>Creación de Registro de Estudios</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+        <h1>Creación de estudios</h1>
 
-    <form action="/studies" method="post">
+        <form action="/studies" method="post">
         @csrf
         <div>
             <label for="code">Código</label>
             <input type="text" name="code"> 
         </div>
+
         <div>
             <label for="name">Nombre</label>
             <input type="text" name="name"> 
@@ -27,12 +29,12 @@
         </div>
 
         <div>
-            <input type="submit" value="Crear"> 
-        </div>    
-    </form><br>
-    <a href="/studies" class="btn btn-primary float-right">
-                Volver
-    </a>    
-</body>
+            <input type="submit" value="crear"> 
+        </div>        
+        </form>
+        </div>
+    </div>
 
+</div>
+</body>
 </html>
