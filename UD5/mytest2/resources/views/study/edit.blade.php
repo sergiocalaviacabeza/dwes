@@ -34,7 +34,7 @@
         </div>        
     </form>
     <br>
-    <a href="/activities" class="btn btn-primary float-right">
+    <a href="/studies" class="btn btn-primary float-right">
                 Volver
     </a>    
 

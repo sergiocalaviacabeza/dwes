@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Estudio nº {{$study}}</h1>
+    <h1>Estudio nº {{$study->id}}</h1>
 
 
     <ul>
@@ -23,5 +23,8 @@
             {{ $study->description }}
         </li>
     </ul>
+    <a href="/studies" class="btn btn-primary float-right">
+                Volver
+    </a>  
 </body>
 </html>

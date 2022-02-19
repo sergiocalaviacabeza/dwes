@@ -34,7 +34,9 @@
         </form>
         </div>
     </div>
-
+    <a href="/studies" class="btn btn-primary float-right">
+                Volver
+    </a>  
 </div>
 </body>
 </html>
