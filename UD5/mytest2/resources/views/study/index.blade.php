@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h1>Listado de Estudios
+<h1>Lista de Estudios
 </h1>
 
 <a href="/studies/create" class="btn btn-primary float-right">

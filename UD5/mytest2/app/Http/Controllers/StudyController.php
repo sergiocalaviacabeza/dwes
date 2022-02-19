@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Study;
 use Illuminate\Http\Request;
 
 class StudyController extends Controller
@@ -13,7 +14,9 @@ class StudyController extends Controller
      */
     public function index()
     {
-        return view('studies.index');
+        $studies = Study::all();
+
+        return view('study.index',['studies'=>$studies]);
     }
 
     /**
@@ -43,9 +46,9 @@ class StudyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Study $study)
     {
-        return view('studies.show');
+        return view('study.show',['study'=>$study]);
     }
 
     /**
