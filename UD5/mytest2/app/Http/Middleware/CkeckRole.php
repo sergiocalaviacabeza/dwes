@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Auth;
 
 class CkeckRole
 {
@@ -16,6 +17,11 @@ class CkeckRole
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        if(Auth::check() && Auth::user()->role_id == 1){
+            return $next($request);
+        }else{
+          return redirect("/");  
+        }
+        
     }
 }

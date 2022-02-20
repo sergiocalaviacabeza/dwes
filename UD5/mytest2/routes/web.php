@@ -25,6 +25,9 @@ Route::resource('roles',RoleController::class);
 Route::get('/studies/filter',[StudyController::class, 'filter']);
 
 Route::resource('studies',StudyController::class)->middleware('auth');
+Route::get('roles', function(){
+    return "Has accedido a la ruta";
+})->middleware('role');
 
 Auth::routes();
 
