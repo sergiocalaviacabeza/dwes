@@ -9,6 +9,10 @@
 
       <h1>Lista de usuarios</h1>
 
+      <a href="/users/create" class="btn btn-primary float-right">
+                Añadir Nuevo Usuario
+    </a><br><br>
+
       <table class="table table-striped">
         <tr>
           <th>Nombre</th>
