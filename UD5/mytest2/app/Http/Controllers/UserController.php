@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -13,7 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        
+        $users = User::all();
+        return view('user.index',['users'=>$users]);
     }
 
     /**
@@ -23,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
 
     /**
@@ -34,7 +36,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'name'=> 'required',
+            'email'=>'required',
+            'role_id'=>'required',
+        ];
+        $request->validate($rules);
+
+        $user = User::create($request->all());
+
+        return redirect ('/users');
     }
 
     /**
@@ -45,7 +56,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('user.show',['user'=>$study]);
     }
 
     /**
@@ -54,9 +65,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('user.edit', ['user'=> $study]);
     }
 
     /**
@@ -66,9 +77,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $user->fill($request->all());
+        $user->save();
+        return redirect('/users');
     }
 
     /**

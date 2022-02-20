@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudyController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +20,8 @@ Route::get('/', function () {
 });
 
 Route::resource('studies',StudyController::class);
-Route::resource('users',StudyController::class);
+Route::resource('users',UserController::class);
+Route::resource('roles',RoleController::class);
 
 
 Auth::routes();
