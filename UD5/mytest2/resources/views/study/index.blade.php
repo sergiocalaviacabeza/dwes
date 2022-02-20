@@ -34,6 +34,8 @@
 </tr>
 @endforelse
 </table>
+<hr>
+<a href="subjects/create" class="btn btn-primary float-right">Crear Asignatura</a>
 
 <hr>
         <h2>Búsqueda de estudios por nombre</h2>
