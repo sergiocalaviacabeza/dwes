@@ -95,4 +95,12 @@ class StudyController extends Controller
     {
         //
     }
+
+    public function filter (){
+        $filter = $request->filter;
+
+        $studies = Study::where('name','LIKE','%filter%')->get();
+
+        return view('study.index',['studies'=>$studies]);
+    }
 }

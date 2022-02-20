@@ -34,6 +34,24 @@
 </tr>
 @endforelse
 </table>
+
+<hr>
+        <h2>Búsqueda de estudios por nombre</h2>
+        <td> <a href="/studies/{{$study->id}}/filter">Filtro</a>
+        <br><br>
+        <form method="get" id="formulario">
+            <input type="text" id="filtro">
+            <input type="submit">
+        </form>
+        <br>
+        <div id="destinofiltro">
+                destino filtro...
+        </div>
+
+        </div>
+    </div>
+</div>        
+<hr>
 <br>
 <a href="/" class="btn btn-primary float-right">
                 Inicio

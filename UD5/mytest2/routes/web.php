@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::resource('studies',StudyController::class);
 Route::resource('users',UserController::class);
 Route::resource('roles',RoleController::class);
+Route::get('/studies/filter',[StudyController::class, 'filter']);
 
 
 Auth::routes();
