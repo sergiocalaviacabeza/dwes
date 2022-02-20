@@ -24,6 +24,7 @@ Route::resource('users',UserController::class);
 Route::resource('roles',RoleController::class);
 Route::get('/studies/filter',[StudyController::class, 'filter']);
 
+Route::resource('studies',StudyController::class)->middleware('auth');
 
 Auth::routes();
 
