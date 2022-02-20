@@ -15,4 +15,8 @@ class Study extends Model
     {
         return "" . $this->id;
     }
+
+    public function subjects(){
+        return $this->hasMany(Subject::class);
+    }
 }
