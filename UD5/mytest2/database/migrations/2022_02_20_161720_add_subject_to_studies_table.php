@@ -15,7 +15,7 @@ class AddSubjectToStudiesTable extends Migration
     {
         Schema::table('studies', function (Blueprint $table) {
             $table->unsignedBigInteger('subject_id')->default(1);
-            $table->foreing('subject_id')->references('id')->on('studies');
+            $table->foreign('subject_id')->references('id')->on('studies');
             //
         });
     }
