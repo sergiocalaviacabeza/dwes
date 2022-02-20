@@ -15,4 +15,8 @@ class Subject extends Model
     {
         return "" . $this->id;
     }
+
+    public function study(){
+        return $this->belongsTo(Study::class);
+    }
 }
