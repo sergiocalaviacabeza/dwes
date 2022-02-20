@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudyController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\RoleController;
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ Route::get('/', function () {
 });
 
 Route::resource('studies',StudyController::class);
+Route::resource('subjects',SubjectController::class);
 Route::resource('users',UserController::class);
 Route::resource('roles',RoleController::class);
 Route::get('/studies/filter',[StudyController::class, 'filter']);
