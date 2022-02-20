@@ -39,7 +39,7 @@
         <h2>Búsqueda de estudios por nombre</h2>
         <td> <a href="/studies/{{$study->id}}/filter">Filtro</a>
         <br><br>
-        <form method="get" id="formulario">
+        <form action="/studies" method="get" id="formulario">
             <input type="text" id="filtro">
             <input type="submit">
         </form>
