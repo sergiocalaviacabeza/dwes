@@ -1,46 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Documento</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignaturas</title>
 </head>
-
 <body>
-    <h1>Insertar Asignaturas</h1><br>
-    <form action="/subjects" method="post">
-        <div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+        <h1>Añadir Asignaturas</h1>
+
+        <form action="/subjects" method="post">
         @csrf
-        <label>Estudios: </label><select name="study_id">
-            @foreach($studies as $study)
-        <option value="{{ $study->id }}">{{ $study->name }}</option>
-        @endforeach
-        </select>
-        @error('study_id')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
-        </div>
         <div>
             <label for="id_subject">Código</label>
-            <input type="text" name="id_subject">
-            
+            <input type="text" name="id_subject"> 
         </div>
 
         <div>
             <label for="name">Nombre</label>
-            <input type="text" name="name">
+            <input type="text" name="name"> 
         </div>
 
         <div>
             <label for="abreviation">Abreviatura</label>
-            <input type="time" name="abreviation">
+            <input type="text" name="abreviation"> 
         </div>
-        
-        <div>
-            <input type="submit" value="Crear">
-        </div>
-    </form>
-</body>
 
+        <div>
+            <input type="submit" value="crear"> 
+        </div>        
+        </form>
+        </div>
+    </div>
+    <a href="/subjects" class="btn btn-primary float-right">
+                Volver
+    </a>  
+</div>
+</body>
 </html>

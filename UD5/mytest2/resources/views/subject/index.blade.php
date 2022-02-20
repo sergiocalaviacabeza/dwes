@@ -22,9 +22,9 @@
 </tr>
 @forelse ($subjects as $subject)
 <tr>
-    <td>{{$study->id_subject}} </td>
-    <td>{{$study->name}} </td>
-    <td>{{$study->abreviation}} </td>
+    <td>{{$subject->id_subject}} </td>
+    <td>{{$subject->name}} </td>
+    <td>{{$subject->abreviation}} </td>
     <td> <a href="/subjects/{{$subject->id}}">Ver</a></td>
     <td> <a href="/subjects/{{$subject->id}}/edit">Editar</a></td>
 </tr>
