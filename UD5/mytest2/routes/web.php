@@ -20,11 +20,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/studies/filter',[StudyController::class, 'filter']);
 Route::resource('studies',StudyController::class);
 Route::resource('subjects',SubjectController::class);
 Route::resource('users',UserController::class);
 Route::resource('roles',RoleController::class);
-Route::get('/studies/filter',[StudyController::class, 'filter']);
+
 
 Route::resource('studies',StudyController::class)->middleware('auth');
 Route::get('roles', function(){

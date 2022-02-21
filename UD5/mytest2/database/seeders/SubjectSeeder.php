@@ -18,7 +18,8 @@ class SubjectSeeder extends Seeder
         Subject::create([
             'id_subject'=>'IZ66',
             'name'=>'English',
-            'abreviation'=>'Eng'
+            'abreviation'=>'Eng',
+            'study_id'=>1
         ]);
     }
 }

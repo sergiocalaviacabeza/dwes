@@ -28,10 +28,13 @@
     <td> <a href="/studies/{{$study->id}}">Ver</a></td>
     <td> <a href="/studies/{{$study->id}}/edit">Editar</a></td>
 </tr>
-@empty
 <tr>
-    <td colspan="3">No hay estudios registrados</td>
+
+   
+    
 </tr>
+@empty
+
 @endforelse
 </table>
 <hr>
@@ -41,16 +44,14 @@
 
 <hr>
         <h2>Búsqueda de estudios por nombre</h2>
-        <td> <a href="/studies/{{$study->id}}/filter">Filtro</a>
+       
         <br><br>
-        <form action="/studies" method="get" id="formulario">
+        <form action="/studies/filter" method="get" id="formulario">
             <input type="text" id="filtro">
             <input type="submit">
         </form>
         <br>
-        <div id="destinofiltro">
-                destino filtro...
-        </div>
+        
 
         </div>
     </div>

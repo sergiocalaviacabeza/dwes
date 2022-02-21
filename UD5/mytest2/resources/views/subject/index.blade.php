@@ -25,6 +25,7 @@
     <td>{{$subject->id_subject}} </td>
     <td>{{$subject->name}} </td>
     <td>{{$subject->abreviation}} </td>
+    <td>{{$subject->study->name}} </td>
     <td> <a href="/subjects/{{$subject->id}}">Ver</a></td>
     <td> <a href="/subjects/{{$subject->id}}/edit">Editar</a></td>
 </tr>

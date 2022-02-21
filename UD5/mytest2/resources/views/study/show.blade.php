@@ -22,6 +22,10 @@
             <strong>Descripcion</strong>
             {{ $study->description }}
         </li>
+
+        @foreach($study->subjects as $subject)
+            <li>{{$subject->name}}</li>
+    @endforeach
     </ul>
     <a href="/studies" class="btn btn-primary float-right">
                 Volver
