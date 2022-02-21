@@ -47,7 +47,7 @@
        
         <br><br>
         <form action="/studies/filter" method="get" id="formulario">
-            <input type="text" id="filtro">
+            <input type="text" id="filtro" name="filtro">
             <input type="submit">
         </form>
         <br>
@@ -58,8 +58,6 @@
 </div>        
 <hr>
 <br>
-<a href="/" class="btn btn-primary float-right">
-                Inicio
-    </a>
+
 </body>
 </html>
