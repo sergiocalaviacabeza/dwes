@@ -36,8 +36,8 @@
 </table>
 <hr>
 <br>
-<a href="/" class="btn btn-primary float-right">
-                Inicio
+<a href="/studies" class="btn btn-primary float-right">
+                Volver
     </a>
 </body>
 </html>

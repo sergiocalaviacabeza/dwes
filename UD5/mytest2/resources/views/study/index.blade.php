@@ -36,6 +36,8 @@
 </table>
 <hr>
 <a href="subjects/create" class="btn btn-primary float-right">Crear Asignatura</a>
+<br><br>
+<a href="subjects" class="btn btn-primary float-right">Ver Asignaturas</a>
 
 <hr>
         <h2>Búsqueda de estudios por nombre</h2>
