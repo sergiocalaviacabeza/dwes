@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/studies/filter',[StudyController::class, 'filter']);
+Route::get('/studies/filter',[StudyController::class, 'filter']);//filter se pone ariba del todo
 Route::resource('studies',StudyController::class);
 Route::resource('subjects',SubjectController::class);
 Route::resource('users',UserController::class);
