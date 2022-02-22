@@ -31,6 +31,7 @@
     <td>{{$service->time}} </td>
     <td> <a href="/services/{{$service->id}}">Ver</a></td>
     <td> <a href="/services/{{$service->id}}/edit">Editar</a></td>
+    <td> <a href="/services/{{$service->id}}/destroy">Eliminar</a></td>
 </tr>
 <tr>
 

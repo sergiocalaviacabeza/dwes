@@ -16,4 +16,8 @@ class Service extends Model
         return "" . $this->id;
     }
 
+    public function users(){
+        return $this->hasMany(User::class);
+    }
+
 }

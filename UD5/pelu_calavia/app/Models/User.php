@@ -21,7 +21,13 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
+        'service_date'
     ];
+    public function toString()
+    {
+        return "" . $this->id;
+    }
 
     /**
      * The attributes that should be hidden for serialization.
@@ -41,4 +47,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function service(){
+        return $this->belongsTo(Service::class);
+    }
 }
