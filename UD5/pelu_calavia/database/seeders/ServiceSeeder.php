@@ -24,19 +24,19 @@ class ServiceSeeder extends Seeder
         ]);
 
         Service::create([
-            'code' => 'P01',
-            'name' => 'cortar-mujer',
+            'code' => 'P02',
+            'name' => 'cortar-hombre',
             'details' => 'Cada corte es único y personal',
-            'price' => '20',
-            'time' => '30'
+            'price' => '16',
+            'time' => '20'
         ]);
 
         Service::create([
-            'code' => 'P01',
-            'name' => 'cortar-mujer',
-            'details' => 'Cada corte es único y personal',
-            'price' => '20',
-            'time' => '30'
+            'code' => 'P03',
+            'name' => 'balayage-mujer',
+            'details' => 'Nuestra técnica aporta luminosidad y naturalidad',
+            'price' => '45',
+            'time' => '60'
         ]);
     }
 }

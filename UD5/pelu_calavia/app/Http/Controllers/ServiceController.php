@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -13,7 +14,9 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        return view('services.index');
+        $services = Service::all();
+
+        return view('service.index', ['services' => $services]);
     }
 
     /**
@@ -43,9 +46,9 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Service $service)
     {
-        //
+        return view('service.show',['service' => $service]);
     }
 
     /**
