@@ -30,6 +30,16 @@
         </div>
 
         <div>
+            <label for="price">Precio</label>
+            <input type="text" name="price" value="{{$service->price}}"> 
+        </div>
+
+        <div>
+            <label for="time">Tiempo</label>
+            <input type="text" name="time" value="{{$service->time}}"> 
+        </div>
+
+        <div>
             <input type="submit" value="Actualizar"> 
         </div>        
     </form>

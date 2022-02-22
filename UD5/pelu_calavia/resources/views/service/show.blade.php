@@ -31,9 +31,6 @@
             {{ $service->time }}
         </li>
 
-        <!--@foreach($study->subjects as $subject)
-            <li>{{$subject->name}}</li>
-    @endforeach-->
     </ul>
     <a href="/services" class="btn btn-primary float-right">
                 Volver

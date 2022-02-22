@@ -26,7 +26,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('services.create');
+        return view('service.create');
     }
 
     /**
@@ -37,7 +37,18 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'code'=> 'required|max:3',
+            'name'=>'required|max:50',
+            'details'=>'required|max:250',
+            'price'=>'required',
+            'time'=>'required',
+        ];
+        $request->validate($rules);
+
+        $service = Service::create($request->all());
+
+        return redirect ('/services');
     }
 
     /**
@@ -57,9 +68,9 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Service $service)
     {
-        //
+        return view('service.edit', ['service'=> $service]);
     }
 
     /**
@@ -69,9 +80,11 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Service $service)
     {
-        //
+        $service->fill($request->all());
+        $service->save();
+        return redirect('/services');
     }
 
     /**
