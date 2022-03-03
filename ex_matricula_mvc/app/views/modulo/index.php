@@ -14,7 +14,7 @@
       <h1>Lista de módulos</h1>
       <p>
       <a href="/modulo/create" class="btn btn-primary">Nuevo</a>
-      <a href="/modulo/" class="btn btn-primary">Ver matrícula</a>        
+      <a href="/modulo/matriculaModulos" class="btn btn-primary">Ver matrícula</a>        
       </p>
       <hr>
         <h2>Búsqueda de módulos</h2>
@@ -43,7 +43,7 @@
           
           <td>
             <a href="/modulo/edit/<?php echo $modulo->id ?>" class="btn btn-primary">Editar </a>
-            <a href="/modulo/matricular/<?php echo $jugador->id ?>" class="btn btn-success">Matrícula </a>
+            <a href="/modulo/matricular/<?php echo $modulo->id ?>" class="btn btn-success">Matrícula </a>
           </td>
           </tr>
         <?php } ?>
