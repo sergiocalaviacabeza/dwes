@@ -15,6 +15,8 @@ class ModuloController
 
     public function index()
     {
+        $modulos = Modulo::all();
+        require "app/views/modulo/index.php";
                
     }
 
@@ -25,7 +27,7 @@ class ModuloController
 
     public function create()
     {
-        
+        require "app/views/modulo/create.php";
     }
 
     public function edit($arguments)

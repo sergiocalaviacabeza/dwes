@@ -25,7 +25,16 @@ class Modulo extends Model
 
     public static function all()
     {
-       
+       //obtener conexión
+       $db = Modulo::db();
+       //preparar consulta
+       $sql = "SELECT * FROM modulos";
+       //ejecutar
+       $statement = $db->query($sql);
+       //recoger datos con fetch_all
+       $modulos = $statement->fetchAll(PDO::FETCH_CLASS, Modulo::class);
+       //retornar
+       return $modulos;
     }
 
     public function insert()
