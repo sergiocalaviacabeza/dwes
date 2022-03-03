@@ -41,8 +41,21 @@ class ModuloController
     }
 
     public function store()
-    {             
-        
+    {      
+        $modulo = new Modulo;
+        $modulo->codigo = $_POST['codigo'];
+        $modulo->nombre = $_POST['nombre'];
+        $modulo->horas = $_POST['horas'];
+        $modulo->plazas = $_POST['plazas'];
+        $modulo->grupo = $_POST['grupo'];
+       
+        if (empty($_POST['id'])) {
+            $modulo->insert();
+        } else {
+            $modulo->id = $_POST['id'];
+            $modulo->save();
+        }       
+        header('Location: /modulo');
     }
 
     public function matricular($arg)

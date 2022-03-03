@@ -39,6 +39,14 @@ class Modulo extends Model
 
     public function insert()
     {
+        $db = Modulo::db();
+        $stmt = $db->prepare('INSERT INTO modulos(codigo, nombre, horas, plazas, grupo) VALUES(:codigo, :nombre, :horas, :plazas, :grupo)');
+        $stmt->bindValue(':codigo', $this->codigo);
+        $stmt->bindValue(':nombre', $this->nombre);
+        $stmt->bindValue(':horas', $this->horas);
+        $stmt->bindValue(':plazas', $this->plazas);
+        $stmt->bindValue(':grupo', $this->grupo);
+        return $stmt->execute();
       
     }
 
