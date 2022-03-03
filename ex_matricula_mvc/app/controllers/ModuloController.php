@@ -64,19 +64,21 @@ class ModuloController
     {
         $id = $arg[0];
         $modulo = Modulo::find($id);
-        $_SESSION['matricula'][$id] = $modulo;
+        $_SESSION['modulos'][$id] = $modulo;
         header('Location: /modulo');
     }
     public function matriculaModulos()
     {
-        $modulos = $_SESSION['matricula'];
+        $modulos = $_SESSION['modulos'];
+
         require "app/views/modulo/matricula.php"; 
              
     }
     public function quitar($arg)
     {
         $id = $arg[0];
-        unset($_SESSION['matricula'][$id]);
-        header('Location: /modulo/matricula');
+        unset($_SESSION['modulos'][$id]);
+
+        header('Location: /modulo/matriculaModulos');
     }
 }
