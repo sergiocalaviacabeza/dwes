@@ -32,7 +32,9 @@ class ModuloController
 
     public function edit($arguments)
     {
-        
+        $id = (int) $arguments[0];
+        $modulo = Modulo::find($id);
+        require "app/views/modulo/create.php";
     }
 
     public function update()

@@ -14,6 +14,12 @@ class Modulo extends Model
 
     public static function find($id) 
     {
+        $db = Modulo::db();
+        $stmt = $db->prepare('SELECT * FROM modulos WHERE id=:id');
+        $stmt->execute(array(':id' => $id));
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Modulo::class);
+        $modulo = $stmt->fetch(PDO::FETCH_CLASS);
+        return $modulo;
         
     } 
     
@@ -52,6 +58,14 @@ class Modulo extends Model
 
     public function save()
     {
-        
+        $db = Modulo::db();
+        $stmt = $db->prepare('UPDATE modulos SET codigo = :codigo, nombre = :nombre, horas = :horas, plazas = :plazas, grupo = :grupo WHERE id = :id');
+        $stmt->bindValue(':id', $this->id);
+        $stmt->bindValue(':codigo', $this->codigo);
+        $stmt->bindValue(':nombre', $this->nombre);
+        $stmt->bindValue(':horas', $this->horas);
+        $stmt->bindValue(':plazas', $this->plazas);
+        $stmt->bindValue(':grupo', $this->grupo);
+        return $stmt->execute();
     }
 }

@@ -12,13 +12,15 @@
   <main role="main" class="container">
   <div class="starter-template">
 
-  <h1>Alta de módulos</h1>
+  <h1>Alta / Editar módulos</h1>
+
+  <h1><?php echo ((is_null($modulo)) ? 'Alta ' : 'Edición ') ?>de jugador</h1>
 
   <form method="post" action="/modulo/store" enctype="multipart/form-data">
   
     <input type="hidden" name="id"
         value="<?php echo ((is_null($modulo)) ? '' : $modulo->id) ?>">
-        
+
     <div class="form-group">
         <label>Código</label>
         <input type="text" name="codigo" class="form-control" value=<?php echo ((is_null($modulo)) ? '' : $modulo->codigo) ?>>
