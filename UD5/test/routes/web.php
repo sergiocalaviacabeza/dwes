@@ -17,7 +17,7 @@ use App\Http\Controllers\RoleController;
 */
 
 Route::get('/', function () {
-    return "hola mundo";
+    return view ("welcome");
 });
 
 Route::get('prueba2', [PruebaController::class, 'hola']);

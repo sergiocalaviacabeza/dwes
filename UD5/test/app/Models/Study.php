@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Study extends Model
 {
+    protected $fillable=array('code','abreviation','name');
     use HasFactory;
+
 }
