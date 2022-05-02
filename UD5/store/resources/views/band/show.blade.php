@@ -22,9 +22,11 @@
             <strong>País</strong>
             {{ $band->country }}
         </li>
+        <hr>
+        <h3>Discos a la venta</h3>
 
         @foreach($band->records as $record)
-            <li>{{$record->name}}</li>
+            <li>{{$record->title}}</li>
         @endforeach
         
     </ul>
