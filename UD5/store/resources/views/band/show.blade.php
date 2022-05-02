@@ -22,6 +22,10 @@
             <strong>País</strong>
             {{ $band->country }}
         </li>
+
+        @foreach($band->records as $record)
+            <li>{{$record->name}}</li>
+        @endforeach
         
     </ul>
     <a href="/bands" class="btn btn-primary float-right">

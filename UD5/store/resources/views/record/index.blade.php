@@ -22,6 +22,7 @@
     <th>Formato</th>
     <th>Estado</th>
     <th>Precio</th>
+    <th>Grupo</th>
 </tr>
 @forelse ($records as $record)
 <tr>
@@ -31,6 +32,7 @@
     <td>{{$record->format}} </td>
     <td>{{$record->condition}} </td>
     <td>{{$record->price}} </td>
+    <td>{{$record->band->name}} </td>
     <td> <a href="/records/{{$record->id}}">Ver</a></td>
     <td> <a href="/records/{{$record->id}}/edit">Editar</a></td>
 </tr>
