@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grupos</title>
 </head>
 <body>
-    <h1>Estudio nº {{$study->id}}</h1>
+    <h1>Grupo nº {{$band->id}}</h1>
 
 
     <ul>
         <li>
-            <strong>Código</strong>
-            {{ $study->code }}
-        </li>
-        <li>
             <strong>Nombre</strong>
-            {{ $study->name }}
+            {{ $band->name }}
         </li>
         <li>
-            <strong>Descripcion</strong>
-            {{ $study->description }}
+            <strong>Estilo</strong>
+            {{ $band->style }}
+        </li>
+        <li>
+            <strong>País</strong>
+            {{ $band->country }}
         </li>
 
-        @foreach($study->subjects as $subject)
-            <li>{{$subject->name}}</li>
+        @foreach($band->records as $record)
+            <li>{{$record->name}}</li>
     @endforeach
     </ul>
-    <a href="/studies" class="btn btn-primary float-right">
+    <a href="/bands" class="btn btn-primary float-right">
                 Volver
     </a>  
 </body>
