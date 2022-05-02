@@ -15,6 +15,11 @@ class CreateRecordsTable extends Migration
     {
         Schema::create('records', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('code',20)->unique();
+            $table->string('year');
+            $table->string('format');
+            $table->string('condition');
             $table->timestamps();
         });
     }

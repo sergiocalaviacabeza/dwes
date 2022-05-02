@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Record;
 use Illuminate\Http\Request;
 
 class RecordController extends Controller
@@ -13,7 +14,9 @@ class RecordController extends Controller
      */
     public function index()
     {
-        //
+        $records = Record::all();
+
+        return view('record.index',['records'=>$records]);
     }
 
     /**
@@ -23,7 +26,7 @@ class RecordController extends Controller
      */
     public function create()
     {
-        //
+        return view('record.create');
     }
 
     /**
@@ -34,7 +37,18 @@ class RecordController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'title'=>'required',
+            'code'=> 'required|max:20',
+            'year'=>'required',
+            'format'=>'required',
+            'condition'=>'required'
+        ];
+        $request->validate($rules);
+
+        $record = Record::create($request->all());
+
+        return redirect ('/records');
     }
 
     /**
@@ -43,9 +57,9 @@ class RecordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Record $record)
     {
-        //
+        return view('record.show',['record'=>$record]);
     }
 
     /**
@@ -54,9 +68,9 @@ class RecordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Record $record)
     {
-        //
+        return view('record.edit', ['record'=> $record]);
     }
 
     /**
@@ -66,9 +80,11 @@ class RecordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Record $record)
     {
-        //
+        $record->fill($request->all());
+        $record->save();
+        return redirect('/records');
     }
 
     /**
