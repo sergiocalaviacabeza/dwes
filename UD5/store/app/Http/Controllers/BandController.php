@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Band;
 use Illuminate\Http\Request;
 
 class BandController extends Controller
@@ -13,7 +14,9 @@ class BandController extends Controller
      */
     public function index()
     {
-        //
+        $bands = Band::all();
+
+        return view('band.index', ['bands'=>$bands]);
     }
 
     /**
@@ -43,9 +46,9 @@ class BandController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Band $band)
     {
-        //
+        return view('band.show',['band'=>$band]);
     }
 
     /**
