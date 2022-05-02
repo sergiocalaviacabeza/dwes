@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Band extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name','style','country'];
+
+    public function toString()
+    {
+        return "" . $this->id;
+    }
+
 }

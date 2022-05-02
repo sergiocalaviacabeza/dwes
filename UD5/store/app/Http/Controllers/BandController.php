@@ -26,7 +26,7 @@ class BandController extends Controller
      */
     public function create()
     {
-        //
+        return view('band.create');
     }
 
     /**
@@ -37,7 +37,16 @@ class BandController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'name'=> 'required',
+            'style'=>'required',
+            'country'=>'required',
+        ];
+        $request->validate($rules);
+
+        $band = Band::create($request->all());
+
+        return redirect ('/bands');
     }
 
     /**
@@ -57,9 +66,9 @@ class BandController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Band $band)
     {
-        //
+        return view('band.edit', ['band'=> $band]);
     }
 
     /**
@@ -69,9 +78,11 @@ class BandController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Band $band)
     {
-        //
+        $band->fill($request->all());
+        $band->save();
+        return redirect('/bands');
     }
 
     /**
@@ -83,5 +94,12 @@ class BandController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function filter (Request $request){
+        $filter = $request->filtro;
+        $bands = Band::where('name','LIKE',"%$filter%")->get();
+
+        return view('band.index',['bands'=>$bands]);
     }
 }
