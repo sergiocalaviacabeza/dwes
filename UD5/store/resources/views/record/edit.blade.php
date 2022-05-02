@@ -11,7 +11,7 @@
 
     <h1>Editar Actualizar Disco</h1>
 
-    <form action="/records/{{$recor->id}}" method="post">
+    <form action="/records/{{$record->id}}" method="post">
         @csrf
         <input type="hidden" name="_method" value="PUT">
         <div>

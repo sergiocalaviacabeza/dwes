@@ -40,7 +40,7 @@
 </table>
 <hr>
 <br>
-<a href="/records" class="btn btn-primary float-right">
+<a href="/bands" class="btn btn-primary float-right">
                 Volver
     </a>
 </body>
