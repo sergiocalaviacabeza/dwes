@@ -29,7 +29,6 @@
     <td>{{$record->year}} </td>
     <td>{{$record->format}} </td>
     <td>{{$record->condition}} </td>
-    <td>{{$record->band->name}} </td>
     <td> <a href="/records/{{$record->id}}">Ver</a></td>
     <td> <a href="/records/{{$record->id}}/edit">Editar</a></td>
 </tr>
