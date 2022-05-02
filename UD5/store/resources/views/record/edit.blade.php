@@ -40,6 +40,11 @@
         </div>
 
         <div>
+            <label for="price">Precio</label>
+            <input type="text" name="price" value="{{$record->price}}"> 
+        </div>
+
+        <div>
             <input type="submit" value="Actualizar"> 
         </div>        
     </form>

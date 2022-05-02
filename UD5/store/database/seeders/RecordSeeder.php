@@ -20,7 +20,8 @@ class RecordSeeder extends Seeder
             'code'=>'EPIC-28004',
             'year'=>'1984',
             'format'=>'LP',
-            'condition'=>'mint'
+            'condition'=>'mint',
+            'price'=>'20 €'
         ]);
     }
 }

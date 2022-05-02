@@ -9,7 +9,7 @@ class Record extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','code','year', 'format','condition'];
+    protected $fillable = ['title','code','year', 'format','condition', 'price'];
 
     public function toString()
     {

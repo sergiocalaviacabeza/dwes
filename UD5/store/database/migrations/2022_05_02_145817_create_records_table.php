@@ -20,6 +20,7 @@ class CreateRecordsTable extends Migration
             $table->string('year');
             $table->string('format');
             $table->string('condition');
+            $table->string('price');
             $table->timestamps();
         });
     }

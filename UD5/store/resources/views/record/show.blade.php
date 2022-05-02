@@ -30,6 +30,10 @@
             <strong>Estado</strong>
             {{ $record->condition }}
         </li>
+        <li>
+            <strong>Precio</strong>
+            {{ $record->price }}
+        </li>
     </ul>
     <a href="/records" class="btn btn-primary float-right">
                 Volver

@@ -42,7 +42,8 @@ class RecordController extends Controller
             'code'=> 'required|max:20',
             'year'=>'required',
             'format'=>'required',
-            'condition'=>'required'
+            'condition'=>'required',
+            'price'=>'required'
         ];
         $request->validate($rules);
 

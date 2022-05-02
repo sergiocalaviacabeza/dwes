@@ -21,6 +21,7 @@
     <th>Año</th>
     <th>Formato</th>
     <th>Estado</th>
+    <th>Precio</th>
 </tr>
 @forelse ($records as $record)
 <tr>
@@ -29,6 +30,7 @@
     <td>{{$record->year}} </td>
     <td>{{$record->format}} </td>
     <td>{{$record->condition}} </td>
+    <td>{{$record->price}} </td>
     <td> <a href="/records/{{$record->id}}">Ver</a></td>
     <td> <a href="/records/{{$record->id}}/edit">Editar</a></td>
 </tr>
