@@ -15,4 +15,8 @@ class Record extends Model
     {
         return "" . $this->id;
     }
+
+    public function band(){
+        return $this->belongsTo(Band::class);
+    }
 }
