@@ -27,7 +27,7 @@ class AddBandToRecordsTable extends Migration
     public function down()
     {
         Schema::table('records', function (Blueprint $table) {
-            $table->dropForeign('records_study_id_foreign');
+            $table->dropForeign('records_band_id_foreign');
             $table->dropColumn('record_id');
         });
     }
