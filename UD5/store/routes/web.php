@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BandController;
+use App\Http\Controllers\RecordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/bands/filter',[BandController::class, 'filter']);
 Route::resource('bands', BandController::class);
+Route::resource('records',RecordController::class);

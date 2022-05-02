@@ -16,4 +16,7 @@ class Band extends Model
         return "" . $this->id;
     }
 
+    public function records(){
+        return $this->hasMany(Record::class);
+    }
 }
