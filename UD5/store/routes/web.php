@@ -22,3 +22,6 @@ Route::get('/', function () {
 Route::get('/bands/filter',[BandController::class, 'filter']);
 Route::resource('bands', BandController::class);
 Route::resource('records',RecordController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

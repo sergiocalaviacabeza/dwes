@@ -14,7 +14,7 @@ class AddBandToRecordsTable extends Migration
     public function up()
     {
         Schema::table('records', function (Blueprint $table) {
-            $table->unsignedBigInteger('band_id')->default(1);
+            $table->unsignedBigInteger('band_id');
             $table->foreign('band_id')->references('id')->on('bands');
         });
     }
