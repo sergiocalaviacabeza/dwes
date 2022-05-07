@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupos</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+
     <h1>Grupo nº {{$band->id}}</h1>
 
 
@@ -33,5 +31,6 @@
     <a href="/bands" class="btn btn-primary float-right">
                 Volver
     </a>  
-</body>
-</html>
+    </div>
+</div>
+@endsection

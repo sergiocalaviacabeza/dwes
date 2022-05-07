@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <title>Edición</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
 
     <h1>Editar Actualizar Disco</h1>
 
@@ -52,7 +47,6 @@
     <a href="/records" class="btn btn-primary float-right">
                 Volver
     </a>    
-
-</body>
-
-</html>
+    </div>
+</div>
+@endsection

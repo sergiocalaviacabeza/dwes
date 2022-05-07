@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discos</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+
         <h1>Añadir Disco</h1>
 
         <form action="/records" method="post">
@@ -45,13 +40,12 @@
 
         <div>
             <input type="submit" value="crear"> 
-        </div>        
+        </div>
+        <hr>        
         </form>
         </div>
     </div>
-    <a href="/records" class="btn btn-primary float-right">
-                Volver
-    </a>  
+    <br>
+    <a href="/records" class="btn btn-primary float-right">Volver</a>  
 </div>
-</body>
-</html>
+@endsection

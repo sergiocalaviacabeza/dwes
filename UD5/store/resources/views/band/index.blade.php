@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupos</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
 
 <h1>Lista de Grupos
 </h1>
 
 <a href="/bands/create" class="btn btn-primary float-right">
                 Añadir Nuevo Grupo
-    </a><br><br>
+    </a>
+    <br>
+    <hr>
 
 <table border="1">
 <tr>
@@ -39,7 +38,8 @@
 </table>
 <hr>
 <a href="records/create" class="btn btn-primary float-right">Crear Disco</a>
-<br><br>
+<br>
+<hr>
 <a href="records" class="btn btn-primary float-right">Ver Discos</a>
 
 <hr>
@@ -58,6 +58,6 @@
 </div>        
 <hr>
 <br>
-
-</body>
-</html>
+</div>
+</div>
+@endsection
