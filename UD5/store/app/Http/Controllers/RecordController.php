@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Record;
+use App\Models\Band;
 use Illuminate\Http\Request;
 
 class RecordController extends Controller
@@ -26,7 +27,8 @@ class RecordController extends Controller
      */
     public function create()
     {
-        return view('record.create');
+        $bands = Band::all();
+        return view('record.create', ["bands" => $bands]);
     }
 
     /**

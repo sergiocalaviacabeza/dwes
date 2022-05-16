@@ -14,25 +14,25 @@
 
         <table class="table table-striped">
             <tr>
+                <th>Grupo</th>
                 <th>Título</th>
                 <th>Código</th>
                 <th>Año</th>
                 <th>Formato</th>
                 <th>Estado</th>
                 <th>Precio</th>
-                <th>Grupo</th>
                 <th></th>
                 <th></th>
             </tr>
             @forelse ($records as $record)
             <tr>
+                <td>{{$record->band->name}} </td>
                 <td>{{$record->title}} </td>
                 <td>{{$record->code}} </td>
                 <td>{{$record->year}} </td>
                 <td>{{$record->format}} </td>
                 <td>{{$record->condition}} </td>
                 <td>{{$record->price}} </td>
-                <td>{{$record->band->name}} </td>
                 <td> <a href="/records/{{$record->id}}">Ver</a></td>
                 <td> <a href="/records/{{$record->id}}/edit">Editar</a></td>
             </tr>
