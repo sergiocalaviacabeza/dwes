@@ -27,6 +27,7 @@ class RecordController extends Controller
      */
     public function create()
     {
+        
         $bands = Band::all();
         return view('record.create', ["bands" => $bands]);
     }
@@ -39,6 +40,7 @@ class RecordController extends Controller
      */
     public function store(Request $request)
     {
+        
         $rules = [
             'title'=>'required',
             'code'=> 'required|max:20',
@@ -48,7 +50,6 @@ class RecordController extends Controller
             'price'=>'required'
         ];
         $request->validate($rules);
-
         $record = Record::create($request->all());
 
         return redirect ('/records');

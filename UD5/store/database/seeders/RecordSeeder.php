@@ -21,7 +21,10 @@ class RecordSeeder extends Seeder
             'year'=>'1984',
             'format'=>'LP',
             'condition'=>'mint',
-            'price'=>'20 €'
+            'price'=>'20 €',
+            'band_id'=>1
         ]);
+
+      
     }
 }
