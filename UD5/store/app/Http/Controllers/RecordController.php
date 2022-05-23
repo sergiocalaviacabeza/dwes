@@ -106,7 +106,7 @@ class RecordController extends Controller
 
     public function filter (Request $request){
         $filter = $request->filtro;
-        $records = Record::where('name','LIKE',"%$filter%")->get();
+        $records = Record::where('title','LIKE',"%$filter%")->get();
 
         return view('record.index',['records'=>$records]);
     }
