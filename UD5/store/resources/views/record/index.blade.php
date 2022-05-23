@@ -45,7 +45,7 @@
         <hr>
         <br>
         <a href="/bands" class="btn btn-primary float-right">
-            Volver
+            Volver al inicio Grupos
         </a>
     </div>
 </div>
