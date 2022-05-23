@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Record;
-use App\Models\Band;
 use Illuminate\Http\Request;
 
-class RecordController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +13,7 @@ class RecordController extends Controller
      */
     public function index()
     {
-        $records = Record::all();
-
-        return view('record.index',['records'=>$records]);
+        //
     }
 
     /**
@@ -27,9 +23,7 @@ class RecordController extends Controller
      */
     public function create()
     {
-        
-        $bands = Band::all();
-        return view('record.create', ["bands" => $bands]);
+        //
     }
 
     /**
@@ -40,19 +34,7 @@ class RecordController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $rules = [
-            'title'=>'required',
-            'code'=> 'required|max:20',
-            'year'=>'required',
-            'format'=>'required',
-            'condition'=>'required',
-            'price'=>'required'
-        ];
-        $request->validate($rules);
-        $record = Record::create($request->all());
-
-        return redirect ('/records');
+        //
     }
 
     /**
@@ -61,10 +43,9 @@ class RecordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Record $record)
+    public function show($id)
     {
-        $bands = Band::all();
-        return view('record.show',["bands" => $bands],['record'=>$record]);
+        //
     }
 
     /**
@@ -73,10 +54,9 @@ class RecordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Record $record)
+    public function edit($id)
     {
-        $bands = Band::all();
-        return view('record.edit',["bands" => $bands], ['record'=> $record]);
+        //
     }
 
     /**
@@ -86,11 +66,9 @@ class RecordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Record $record)
+    public function update(Request $request, $id)
     {
-        $record->fill($request->all());
-        $record->save();
-        return redirect('/records');
+        //
     }
 
     /**

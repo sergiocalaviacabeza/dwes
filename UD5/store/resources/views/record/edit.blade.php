@@ -7,8 +7,20 @@
     <h1>Editar Actualizar Disco</h1>
 
     <form action="/records/{{$record->id}}" method="post">
-        @csrf
+        
         <input type="hidden" name="_method" value="PUT">
+        <div>
+        @csrf
+        <label>Grupo: </label><select name="band_id">
+            @foreach($bands as $band)
+        <option value="{{ $band->id }}">{{ $band->name }}</option>
+        @endforeach
+        </select>
+        @error('band_id')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+
         <div>
             <label for="title">Título</label>
             <input type="text" name="title" value="{{$record->title}}"> 

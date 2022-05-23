@@ -4,10 +4,14 @@
 <div class="container">
     <div class="row justify-content-center">
 
-    <h1>Disco nº {{$record->id}}</h1>
+    <h1>Detalles Disco nº {{$record->id}}</h1>
 
 
     <ul>
+        <li>
+            <strong>Grupo</strong>
+            {{ $record->band->name }}
+        </li>
         <li>
             <strong>Título</strong>
             {{ $record->title }}
