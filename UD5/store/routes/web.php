@@ -20,7 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/bands/filter',[BandController::class, 'filter']);
+Route::get('/bands/filter2',[BandController::class, 'filter2']);
+Route::get('/records/filter',[RecordController::class, 'filter']);
 Route::resource('bands', BandController::class);
 Route::resource('records',RecordController::class);
 Route::resource('users',UserController::class);

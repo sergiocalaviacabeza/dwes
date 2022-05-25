@@ -110,4 +110,5 @@ class RecordController extends Controller
 
         return view('record.index',['records'=>$records]);
     }
+
 }

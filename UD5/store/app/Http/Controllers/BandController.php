@@ -26,6 +26,7 @@ class BandController extends Controller
      */
     public function create()
     {
+        $bands = Band::all();
         return view('band.create');
     }
 
@@ -57,6 +58,7 @@ class BandController extends Controller
      */
     public function show(Band $band)
     {
+        $bands = Band::all();
         return view('band.show',['band'=>$band]);
     }
 
@@ -96,7 +98,7 @@ class BandController extends Controller
         //
     }
 
-    public function filter (Request $request){
+    public function filter2 (Request $request){
         $filter = $request->filtro;
         $bands = Band::where('name','LIKE',"%$filter%")->get();
 

@@ -24,8 +24,8 @@
                 <td>{{$band->name}} </td>
                 <td>{{$band->style}} </td>
                 <td>{{$band->country}} </td>
-                <td> <a href="/bands/{{$band->id}}">Ver</a></td>
-                <td> <a href="/bands/{{$band->id}}/edit">Editar</a></td>
+                <td> <a href="/bands/{{$band->id}}">Ver Discos</a></td>
+                <td> <a href="/bands/{{$band->id}}/edit">Editar Datos Grupo</a></td>
             </tr>
             <tr>
             </tr>
@@ -37,13 +37,22 @@
         <a href="records/create" class="btn btn-primary float-right">Crear Disco</a>
         <br>
         <hr>
-        <a href="records" class="btn btn-primary float-right">Ver Discos</a>
+        <a href="records" class="btn btn-primary float-right">Ver Catálogo de Discos</a>
 
         <hr>
         <h2>Búsqueda de discos por nombre</h2>
 
         <br><br>
         <form action="/records/filter" method="get" id="formulario">
+            <input type="text" id="filtro" name="filtro">
+            <input type="submit">
+            <br><br>
+        </form>
+        <hr>
+        <br><br>
+        <h2>Búsqueda por nombre de grupo</h2>
+        <br><br>
+        <form action="/bands/filter2" method="get" id="formulario">
             <input type="text" id="filtro" name="filtro">
             <input type="submit">
         </form>
