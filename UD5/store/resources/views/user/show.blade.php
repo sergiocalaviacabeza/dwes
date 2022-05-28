@@ -17,16 +17,19 @@
             {{ $user->address }}
         </li>
         <li>
+            <strong>Ciudad</strong>
+            {{ $user->city }}
+        </li>
+        <li>
             <strong>E-mail</strong>
             {{ $user->email }}
         </li>
+        <li>
+            <strong>Rol</strong>
+            {{ $user->role }}
+        </li>
         <hr>
         <h3>Pedidos</h3>
-
-        <!--@foreach($band->records as $record)
-            <li>{{$record->title}}</li>
-        @endforeach
-        -->
         
     </ul>
     <a href="/users" class="btn btn-primary float-right">

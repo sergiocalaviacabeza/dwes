@@ -17,13 +17,17 @@
             <tr>
                 <th>Nombre</th>
                 <th>Dirección</th>
+                <th>Ciudad</th>
                 <th>E-mail</th>
+                <th>Rol</th>
             </tr>
             @forelse ($users as $user)
             <tr>
                 <td>{{$user->name}} </td>
                 <td>{{$user->address}} </td>
-                <td>{{$band->email}} </td>
+                <td>{{$user->city}} </td>
+                <td>{{$user->email}} </td>
+                <td>{{$user->role}} </td>
                 <td> <a href="/users/{{$user->id}}">Ver</a></td>
                 <td> <a href="/users/{{$user->id}}/edit">Editar</a></td>
             </tr>

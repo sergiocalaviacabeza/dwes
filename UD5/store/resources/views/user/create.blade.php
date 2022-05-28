@@ -16,13 +16,21 @@
                 </div>
 
                 <div>
-                    <label for="style">Dirección</label>
+                    <label for="address">Dirección</label>
                     <input type="text" name="address"> 
+                </div>
+                <div>
+                    <label for="city">Ciudad</label>
+                    <input type="text" name="city"> 
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email"> 
                 </div>
 
                 <div>
-                    <label for="country">E-mail</label>
-                    <input type="text" name="email"> 
+                    <label for="role">Rol</label>
+                    <input type="text" name="role"> 
                 </div>
 
                 <div>
