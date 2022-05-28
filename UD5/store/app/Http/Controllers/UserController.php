@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Auth;
 
 class UserController extends Controller
 {
@@ -14,9 +15,10 @@ class UserController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $users = User::all();
 
-        return view('user.index', ['users'=>$users]);
+        return view('user.index', ['users'=>$users, 'user'=>$user]);
     }
 
     /**
@@ -96,5 +98,9 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function construct(){
+        $this->middleware('auth');
     }
 }

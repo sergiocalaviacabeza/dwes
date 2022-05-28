@@ -26,6 +26,9 @@ Route::resource('bands', BandController::class);
 Route::resource('records',RecordController::class);
 Route::resource('users',UserController::class);
 
+Route::resource('bands', BandController::class)->middleware('auth');
+Route::resource('records', RecordController::class)->middleware('auth');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

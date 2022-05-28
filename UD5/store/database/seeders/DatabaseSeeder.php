@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(BandSeeder::class);
         $this->call(RecordSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }

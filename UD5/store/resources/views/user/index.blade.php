@@ -4,6 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
 
+    <p>El usuario logueado {{$user->name}}</p>
+
         <h1>Lista de Usuarios
         </h1>
 
