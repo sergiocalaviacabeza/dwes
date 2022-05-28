@@ -34,7 +34,7 @@
             @endforelse
         </table>
         <hr>
-        <a href="records/create" class="btn btn-primary float-right">Crear Disco</a>
+        <a href="records/create" class="btn btn-primary float-right">Insertar Nuevo Disco</a>
         <br>
         <hr>
         <a href="records" class="btn btn-primary float-right">Ver Catálogo de Discos</a>
