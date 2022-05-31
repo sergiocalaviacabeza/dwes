@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BandController;
 use App\Http\Controllers\RecordController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::get('/records/filter',[RecordController::class, 'filter']);
 Route::resource('bands', BandController::class);
 Route::resource('records',RecordController::class);
 Route::resource('users',UserController::class);
+Route::resource('orders',OrderController::class);
 
 Route::resource('bands', BandController::class)->middleware('auth');
 Route::resource('records', RecordController::class)->middleware('auth');
