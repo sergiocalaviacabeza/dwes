@@ -46,7 +46,7 @@
         <hr>
         <br>
 
-        <h2>Búsqueda de discos por título</h2>
+        <h4>Búsqueda por título de disco (filtro por palabras)</h4>
 
         <br><br>
         <form action="/records/filter" method="get" id="formulario">
@@ -56,7 +56,7 @@
         </form>
         <hr>
         <br><br>
-        <h2>Búsqueda por nombre de grupo</h2>
+        <h4>Búsqueda por nombre de grupo (filtro por palabras)</h4>
         <br><br>
         <form action="/bands/filter2" method="get" id="formulario">
             <input type="text" id="filtro" name="filtro">

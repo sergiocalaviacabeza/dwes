@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
 
 
-        <h1>Lista de Discos
-        </h1>
+        <h2>CATÁLOGO RECORDSTORE - Lista de Discos a la venta
+        </h2>
 
         <a href="/records/create" class="btn btn-success float-right">
             Añadir Nuevo Disco
@@ -45,7 +45,7 @@
         <hr>
         <br>
 
-        <h2>Búsqueda de discos por título</h2>
+        <h4>Búsqueda de discos por título (filtro por palabras)</h4>
 
         <br><br>
         <form action="/records/filter" method="get" id="formulario">
@@ -55,7 +55,7 @@
         </form>
         <hr>
         <br><br>
-        <h2>Búsqueda por nombre de grupo</h2>
+        <h4>Búsqueda por nombre de grupo (filtro por palabras)</h4>
         <br><br>
         <form action="/bands/filter2" method="get" id="formulario">
             <input type="text" id="filtro" name="filtro">
