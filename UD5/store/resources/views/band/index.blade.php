@@ -18,6 +18,8 @@
                 <th>Nombre</th>
                 <th>Estilo</th>
                 <th>País</th>
+                <th></th>
+                <th></th>
             </tr>
             @forelse ($bands as $band)
             <tr>
