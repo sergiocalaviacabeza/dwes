@@ -40,6 +40,10 @@
         <a href="records" class="btn btn-primary float-right">Ver Catálogo de Discos</a>
 
         <hr>
+
+        <hr>
+        <br>
+
         <h2>Búsqueda de discos por nombre</h2>
 
         <br><br>
@@ -62,6 +66,9 @@
 </div>
 <hr>
 <br>
+<a href="/home" class="btn btn-primary float-right">
+            Volver a HOME - INICIO
+        </a>
 </div>
 </div>
 @endsection

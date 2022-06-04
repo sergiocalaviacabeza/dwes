@@ -14,10 +14,16 @@
                         </div>
                     @endif
 
-                    {{ __('Bienvenido a RecordStore!') }}
+                    {{ __('BIENVENIDO A RECORDSTORE!') }}
                     <br>
                     <br>
                     <a href="records" class="btn btn-primary float-right">Ver Catálogo de Discos</a>
+                    <br>
+                    <br>
+                    <a href="bands" class="btn btn-primary float-right">Acceso Gestión Catálogo</a>
+                    <br>
+                    <br>
+                    <a href="users" class="btn btn-primary float-right">Ver Clientes</a>
                 </div>
             </div>
         </div>

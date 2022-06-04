@@ -19,7 +19,6 @@
             <tr>
                 <th>Nombre</th>
                 <th>Dirección</th>
-                <th>Ciudad</th>
                 <th>E-mail</th>
                 <th>Rol</th>
             </tr>
@@ -27,7 +26,6 @@
             <tr>
                 <td>{{$user->name}} </td>
                 <td>{{$user->address}} </td>
-                <td>{{$user->city}} </td>
                 <td>{{$user->email}} </td>
                 <td>{{$user->role}} </td>
                 <td> <a href="/users/{{$user->id}}">Ver</a></td>
@@ -42,6 +40,11 @@
 
             @endforelse
         </table>
+        <br>
+        <hr>
+        <a href="/home" class="btn btn-primary float-right">
+            Volver a HOME - INICIO
+        </a>
 
     </div>
 </div>

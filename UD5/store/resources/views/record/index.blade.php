@@ -47,6 +47,11 @@
         <a href="/bands" class="btn btn-primary float-right">
             Volver al inicio Grupos
         </a>
+        <hr>
+        <br>
+        <a href="/home" class="btn btn-primary float-right">
+            Volver a HOME - INICIO
+        </a>
     </div>
 </div>
 @endsection

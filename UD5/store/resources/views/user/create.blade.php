@@ -20,10 +20,6 @@
                     <input type="text" name="address"> 
                 </div>
                 <div>
-                    <label for="city">Ciudad</label>
-                    <input type="text" name="city"> 
-                </div>
-                <div>
                     <label for="email">E-mail</label>
                     <input type="text" name="email"> 
                 </div>
