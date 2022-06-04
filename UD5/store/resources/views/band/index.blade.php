@@ -13,7 +13,7 @@
         <br>
         <hr>
 
-        <table border="1">
+        <table class="table table-striped">
             <tr>
                 <th>Nombre</th>
                 <th>Estilo</th>
@@ -30,21 +30,23 @@
             <tr>
             </tr>
             @empty
-
+            <tr>
+                <td colspan="3">No hay grupos registrados</td>
+            </tr>
             @endforelse
         </table>
         <hr>
-        <a href="records/create" class="btn btn-primary float-right">Insertar Nuevo Disco</a>
+        <a href="/records/create" class="btn btn-primary float-right">Insertar Nuevo Disco</a>
         <br>
         <hr>
-        <a href="records" class="btn btn-primary float-right">Ver Catálogo de Discos</a>
+        <a href="/records" class="btn btn-primary float-right">Ver Catálogo de Discos</a>
 
         <hr>
 
         <hr>
         <br>
 
-        <h2>Búsqueda de discos por nombre</h2>
+        <h2>Búsqueda de discos por título</h2>
 
         <br><br>
         <form action="/records/filter" method="get" id="formulario">

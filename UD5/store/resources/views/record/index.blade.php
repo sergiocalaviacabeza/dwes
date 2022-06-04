@@ -44,6 +44,26 @@
         </table>
         <hr>
         <br>
+
+        <h2>Búsqueda de discos por título</h2>
+
+        <br><br>
+        <form action="/records/filter" method="get" id="formulario">
+            <input type="text" id="filtro" name="filtro">
+            <input type="submit">
+            <br><br>
+        </form>
+        <hr>
+        <br><br>
+        <h2>Búsqueda por nombre de grupo</h2>
+        <br><br>
+        <form action="/bands/filter2" method="get" id="formulario">
+            <input type="text" id="filtro" name="filtro">
+            <input type="submit">
+        </form>
+        <br>
+        <hr>
+        <br>
         <a href="/bands" class="btn btn-primary float-right">
             Volver al inicio Grupos
         </a>
