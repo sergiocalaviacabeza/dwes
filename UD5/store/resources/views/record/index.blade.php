@@ -23,6 +23,7 @@
                 <th>Precio</th>
                 <th></th>
                 <th></th>
+                <th></th>
             </tr>
             @forelse ($records as $record)
             <tr>
@@ -35,6 +36,7 @@
                 <td>{{$record->price}} </td>
                 <td> <a href="/records/{{$record->id}}">Ver</a></td>
                 <td> <a href="/records/{{$record->id}}/edit">Editar</a></td>
+                <td> <a href="/records/{{$record->id}}/edit">COMPRAR</a></td>
             </tr>
             @empty
             <tr>
