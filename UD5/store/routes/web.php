@@ -5,6 +5,7 @@ use App\Http\Controllers\BandController;
 use App\Http\Controllers\RecordController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\BasketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Route::resource('bands', BandController::class);
 Route::resource('records',RecordController::class);
 Route::resource('users',UserController::class);
 Route::resource('orders',OrderController::class);
+Route::resource('baskets',BasketController::class);
 
 Route::resource('bands', BandController::class)->middleware('auth');
 Route::resource('records', RecordController::class)->middleware('auth');
