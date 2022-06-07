@@ -20,7 +20,7 @@
                 <th>Año</th>
                 <th>Formato</th>
                 <th>Estado</th>
-                <th>Precio</th>
+                <th>Precio (€)</th>
                 <th></th>
                 <th></th>
                 <th></th>
