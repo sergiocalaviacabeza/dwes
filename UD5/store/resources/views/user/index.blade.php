@@ -27,7 +27,7 @@
                 <td>{{$user->name}} </td>
                 <td>{{$user->address}} </td>
                 <td>{{$user->email}} </td>
-                <td>{{$user->role}} </td>
+                <td>{{$user->rol}} </td>
                 <td> <a href="/users/{{$user->id}}">Ver</a></td>
                 <td> <a href="/users/{{$user->id}}/edit">Editar</a></td>
             </tr>

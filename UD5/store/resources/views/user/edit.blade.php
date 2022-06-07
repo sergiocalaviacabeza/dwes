@@ -24,8 +24,8 @@
             <input type="text" name="email" value="{{$user->email}}"> 
         </div>
         <div>
-            <label for="role">Rol</label>
-            <input type="text" name="role" value="{{$user->role}}"> 
+            <label for="rol">Rol</label>
+            <input type="text" name="rol" value="{{$user->rol}}"> 
         </div>
         <div>
             <input type="submit" value="Actualizar"> 
