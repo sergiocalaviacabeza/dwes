@@ -18,7 +18,10 @@
             <label for="address">Dirección</label>
             <input type="text" name="address" value="{{$user->address}}"> 
         </div>
-
+        <div>
+            <label for="city">Ciudad</label>
+            <input type="text" name="city" value="{{$user->city}}"> 
+        </div>
         <div>
             <label for="email">E-mail</label>
             <input type="text" name="email" value="{{$user->email}}"> 

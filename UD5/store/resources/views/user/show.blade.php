@@ -17,6 +17,10 @@
             {{ $user->address }}
         </li>
         <li>
+            <strong>Ciudad</strong>
+            {{ $user->city }}
+        </li>
+        <li>
             <strong>E-mail</strong>
             {{ $user->email }}
         </li>

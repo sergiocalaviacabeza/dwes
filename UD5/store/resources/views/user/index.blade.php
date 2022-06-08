@@ -19,6 +19,7 @@
             <tr>
                 <th>Nombre</th>
                 <th>Dirección</th>
+                <th>Ciudad</th>
                 <th>E-mail</th>
                 <th>Rol</th>
             </tr>
@@ -26,6 +27,7 @@
             <tr>
                 <td>{{$user->name}} </td>
                 <td>{{$user->address}} </td>
+                <td>{{$user->city}} </td>
                 <td>{{$user->email}} </td>
                 <td>{{$user->rol}} </td>
                 <td> <a href="/users/{{$user->id}}">Ver</a></td>
