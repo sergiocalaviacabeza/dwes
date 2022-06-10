@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Basket;
+use App\Models\Record;
+use App\Models\Band;
 use Illuminate\Http\Request;
 use Session;
 
@@ -16,6 +18,18 @@ class BasketController extends Controller
     public function index()
     {
         //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function add(Record $record)
+    {
+        $bands = Band::all();
+        return view('record.show',["bands" => $bands],['record'=>$record]);
     }
 
     /**

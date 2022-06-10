@@ -40,7 +40,7 @@
                 <td> <a href="/records/{{$record->id}}/edit">Editar</a></td>
                 <td> <a href="/baskets/{{$record->id}}/add" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
                 <td> <a href="/baskets/{{$record->id}}/remove">QUITAR CESTA</a></td>
-                <td> <a href="/baskets/{{$record->id}}/remove">CESTA</a></td>
+                <td> <a href="/baskets/{{$record->id}}/show">CESTA</a></td>
             </tr>
             @empty
             <tr>
