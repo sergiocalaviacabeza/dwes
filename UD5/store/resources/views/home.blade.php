@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Registrado') }}</div>
+                <div class="card-header">{{ __('BIENVENIDO A RECORDSTORE !!') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('BIENVENIDO A RECORDSTORE!') }}
+                    {{ __('TU TIENDA ONLINE') }}
                     <br>
                     <br>
                     <a href="records" class="btn btn-primary float-right">Ver Catálogo de Discos</a>
