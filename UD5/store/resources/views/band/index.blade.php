@@ -26,8 +26,8 @@
                 <td>{{$band->name}} </td>
                 <td>{{$band->style}} </td>
                 <td>{{$band->country}} </td>
-                <td> <a href="/bands/{{$band->id}}">Ver Discos</a></td>
-                <td> <a href="/bands/{{$band->id}}/edit">Editar Datos Grupo</a></td>
+                <td> <a href="/bands/{{$band->id}}" class="btn btn-success float-right">Ver Discos Grupo</a></td>
+                <td> <a href="/bands/{{$band->id}}/edit" class="btn btn-success float-right">Editar Datos Grupo</a></td>
             </tr>
             <tr>
             </tr>

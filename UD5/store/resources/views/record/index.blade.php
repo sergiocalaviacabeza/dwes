@@ -36,11 +36,10 @@
                 <td>{{$record->format}} </td>
                 <td>{{$record->condition}} </td>
                 <td>{{$record->price}} </td>
-                <td> <a href="/records/{{$record->id}}">Ver</a></td>
-                <td> <a href="/records/{{$record->id}}/edit">Editar</a></td>
-                <td> <a href="/baskets/{{$record->id}}/add" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
-                <td> <a href="/baskets/{{$record->id}}/remove">QUITAR CESTA</a></td>
-                <td> <a href="/baskets/{{$record->id}}/show">CESTA</a></td>
+                <td> <a href="/records/{{$record->id}}" class="btn btn-success float-right">Ver</a></td>
+                <td> <a href="/records/{{$record->id}}/edit" class="btn btn-success float-right">Editar</a></td>
+                <td> <a href="/baskets/add" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
+                <td> <a href="/baskets/{{$record->id}}/show" class="btn btn-success float-right">CESTA</a></td>
             </tr>
             @empty
             <tr>
