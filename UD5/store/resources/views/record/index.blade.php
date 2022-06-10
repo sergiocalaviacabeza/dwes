@@ -38,7 +38,7 @@
                 <td>{{$record->price}} </td>
                 <td> <a href="/records/{{$record->id}}">Ver</a></td>
                 <td> <a href="/records/{{$record->id}}/edit">Editar</a></td>
-                <td> <a href="/baskets/{{$record->id}}/add">AÑADIR A CESTA</a></td>
+                <td> <a href="/baskets/{{$record->id}}/add" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
                 <td> <a href="/baskets/{{$record->id}}/remove">QUITAR CESTA</a></td>
                 <td> <a href="/baskets/{{$record->id}}/remove">CESTA</a></td>
             </tr>
