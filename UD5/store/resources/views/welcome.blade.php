@@ -442,7 +442,6 @@
                                 <br>
 
                                 <a href="/register" class="btn btn-success float-right">REGISTRO NUEVO CLIENTE</a>
-
                             </div>
 
 
