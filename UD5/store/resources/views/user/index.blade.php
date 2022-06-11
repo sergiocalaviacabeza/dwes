@@ -30,8 +30,8 @@
                 <td>{{$user->city}} </td>
                 <td>{{$user->email}} </td>
                 <td>{{$user->rol}} </td>
-                <td> <a href="/users/{{$user->id}}">Ver</a></td>
-                <td> <a href="/users/{{$user->id}}/edit">Editar</a></td>
+                <td> <a href="/users/{{$user->id}}" class="btn btn-success float-right">Ver</a></td>
+                <td> <a href="/users/{{$user->id}}/edit" class="btn btn-success float-right">Editar</a></td>
             </tr>
             <tr>
 

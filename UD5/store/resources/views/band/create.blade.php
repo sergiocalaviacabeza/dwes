@@ -14,17 +14,17 @@
                     <label for="name">Nombre</label>
                     <input type="text" name="name"> 
                 </div>
-
+                <br>
                 <div>
                     <label for="style">Estilo</label>
                     <input type="text" name="style"> 
                 </div>
-
+                <br>
                 <div>
                     <label for="country">País</label>
                     <input type="text" name="country"> 
                 </div>
-
+                <br>
                 <div>
                     <input type="submit" value="crear"> 
                 </div>        

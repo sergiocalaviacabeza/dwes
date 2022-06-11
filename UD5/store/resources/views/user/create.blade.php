@@ -40,7 +40,7 @@
                 </div>
             </div>
     <a href="/users" class="btn btn-primary float-right">
-                Volver
+                Volver a Usuarios
     </a>  
 </div>
 </div>

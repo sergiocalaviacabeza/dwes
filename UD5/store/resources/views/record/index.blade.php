@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+
+<style type="text/css">   
+        body {
+        font-family: 'Averta', sans-serif;
+        }
+        
+</style>   
+
+
 <div class="container">
     <div class="row justify-content-center">
 
@@ -38,7 +47,7 @@
                 <td>{{$record->price}} </td>
                 <td> <a href="/records/{{$record->id}}" class="btn btn-success float-right">Ver</a></td>
                 <td> <a href="/records/{{$record->id}}/edit" class="btn btn-success float-right">Editar</a></td>
-                <td> <a href="/records/{{$record->id}}/show" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
+                <td> <a href="/records/add" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
                 <td> <a href="/records/{{$record->id}}/show" class="btn btn-success float-right">CESTA</a></td>
             </tr>
             @empty
