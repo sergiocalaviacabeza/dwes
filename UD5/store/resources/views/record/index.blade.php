@@ -2,11 +2,11 @@
 
 @section('content')
 
-<style type="text/css">   
-        body {
+<style type="text/css">
+    body {
         font-family: 'Averta', sans-serif;
-        }
-</style>   
+    }
+</style>
 
 
 <div class="container">
@@ -85,6 +85,6 @@
         <a href="/home" class="btn btn-primary float-right">
             Volver a HOME - INICIO
         </a>
-    </div>
+    </div>               
 </div>
 @endsection
