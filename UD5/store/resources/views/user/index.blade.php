@@ -2,8 +2,10 @@
 
 @section('content')
 
+
+
 <style type="text/css">   
-        body {
+        body {    
         font-family: 'Averta', sans-serif;
         }
 </style>
