@@ -11,7 +11,7 @@
 <div class="container">
     <div class="row justify-content-center">
 
-    <h1>Editar Actualizar Grupo</h1>
+    <h3>Editar Actualizar Grupo</h3>
 
     <form action="/bands/{{$band->id}}" method="post">
         @csrf
