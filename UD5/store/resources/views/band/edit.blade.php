@@ -13,24 +13,25 @@
             <label for="name">Nombre</label>
             <input type="text" name="name" value="{{$band->name}}"> 
         </div>
-
+        <br>
         <div>
             <label for="style">Estilo</label>
             <input type="text" name="style" value="{{$band->style}}"> 
         </div>
-
+        <br>
         <div>
             <label for="country">País</label>
             <input type="text" name="country" value="{{$band->country}}"> 
         </div>
-
+        <br>
         <div>
             <input type="submit" value="Actualizar"> 
-        </div>        
+        </div>
+        <br>        
     </form>
     <br>
     <a href="/bands" class="btn btn-primary float-right">
-                Volver
+                Volver a Grupos
     </a>    
     </div>
 </div>

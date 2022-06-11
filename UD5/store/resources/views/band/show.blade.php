@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
 
-    <h3>Grupo código BD RecordStore {{$band->id}}</h3>
+    <h3>Grupo código {{$band->id}} - BD RecordStore </h3>
 
 
     <ul>

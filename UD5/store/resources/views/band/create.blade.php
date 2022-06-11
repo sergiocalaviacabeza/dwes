@@ -32,7 +32,7 @@
                 </div>
             </div>
     <a href="/bands" class="btn btn-primary float-right">
-                Volver
+                Volver a Grupos
     </a>  
 </div>
 </div>

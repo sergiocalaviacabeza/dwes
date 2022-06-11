@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
 
-    <h2>Detalles Disco nº {{$record->id}}</h2>
+    <h4>RecordStore Detalle Disco código nº{{$record->id}}</h4>
 
-
+    <hr>
     <ul>
         <li>
             <strong>Grupo</strong>
