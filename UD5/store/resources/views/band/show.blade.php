@@ -3,14 +3,14 @@
 @section('content')
 
 <style type="text/css">   
-        body {
+        body {background-image:  url("https://www.poblenouurbandistrict.com/wp-content/uploads/2019/04/record-store-day-.jpg");
         font-family: 'Averta', sans-serif;
         }
 </style>
 
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="card-body">
 
     <h4>Grupo código {{$band->id}} - BD RecordStore </h4>
 
@@ -37,7 +37,7 @@
         
     </ul>
     <a href="/bands" class="btn btn-primary float-right">
-                Volver
+                Volver a Grupos
     </a>  
     </div>
 </div>

@@ -57,13 +57,16 @@
         </div>
         <br>
         <div>
-            <input type="submit" value="crear"> 
+            <input type="submit" class="btn btn-success float-right" value="INSERTAR"> 
         </div>
         <hr>        
         </form>
         </div>
     </div>
     <br>
-    <a href="/records" class="btn btn-primary float-right">Volver</a>  
+    <a href="/records" class="btn btn-primary float-right">Volver a Catálogo Discos</a>  
+    <br><br>
+    <a href="/bands" class="btn btn-primary float-right">
+                Volver a Grupos</a>
 </div>
 @endsection

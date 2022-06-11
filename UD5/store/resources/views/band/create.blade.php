@@ -3,7 +3,7 @@
 @section('content')
 
 <style type="text/css">   
-        body {
+        body {background-image:  url("https://www.poblenouurbandistrict.com/wp-content/uploads/2019/04/record-store-day-.jpg");
         font-family: 'Averta', sans-serif;
         }
 </style>
@@ -11,9 +11,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="card-body">
                 <div class="col-md-8">
-                <h1>Grupos</h1>
+                <h3>Grupo</h3>
 
                 <form action="/bands" method="post">
                 @csrf
@@ -33,7 +33,7 @@
                 </div>
                 <br>
                 <div>
-                    <input type="submit" value="crear"> 
+                    <input type="submit" class="btn btn-success float-right" value="INSERTAR"> 
                 </div>        
                 </form>
                 </div>

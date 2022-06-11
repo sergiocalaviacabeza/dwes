@@ -45,7 +45,10 @@
         </li>
     </ul>
     <a href="/records" class="btn btn-primary float-right">
-                Volver al Catálogo
+                Volver al Catálogo de discos
+    </a>  
+    <a href="/bands" class="btn btn-primary float-right">
+                Volver a Grupos
     </a>  
     </div>
 </div>

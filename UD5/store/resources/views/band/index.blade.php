@@ -9,7 +9,7 @@
 </style>
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="card-body">
 
         <h1>Lista de Grupos
         </h1>

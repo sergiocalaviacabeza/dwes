@@ -3,15 +3,15 @@
 @section('content')
 
 <style type="text/css">   
-        body {
+        body {background-image:  url("https://www.poblenouurbandistrict.com/wp-content/uploads/2019/04/record-store-day-.jpg");
         font-family: 'Averta', sans-serif;
         }
 </style>
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="card-body">
 
-    <h3>Editar Actualizar Grupo</h3>
+    <h4>Editar / Actualizar Grupo</h4>
 
     <form action="/bands/{{$band->id}}" method="post">
         @csrf
@@ -32,7 +32,7 @@
         </div>
         <br>
         <div>
-            <input type="submit" value="Actualizar"> 
+            <input type="submit" class="btn btn-success float-right" value="ACTUALIZAR"> 
         </div>
         <br>        
     </form>
