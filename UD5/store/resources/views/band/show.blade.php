@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
+<style type="text/css">   
+        body {
+        font-family: 'Averta', sans-serif;
+        }
+</style>
+
+
 <div class="container">
     <div class="row justify-content-center">
 

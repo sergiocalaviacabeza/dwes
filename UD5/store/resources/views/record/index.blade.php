@@ -6,7 +6,6 @@
         body {
         font-family: 'Averta', sans-serif;
         }
-        
 </style>   
 
 
