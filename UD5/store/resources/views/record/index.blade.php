@@ -10,7 +10,7 @@
 
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="card-body">
 
 
         <h2>CATÁLOGO RECORDSTORE - Lista de Discos a la venta
@@ -78,7 +78,7 @@
         <hr>
         <br>
         <a href="/bands" class="btn btn-primary float-right">
-            Volver al inicio Grupos
+            Volver a Grupos
         </a>
         <hr>
         <br>

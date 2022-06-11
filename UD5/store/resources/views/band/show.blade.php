@@ -3,7 +3,8 @@
 @section('content')
 
 <style type="text/css">   
-        body {background-image:  url("https://www.poblenouurbandistrict.com/wp-content/uploads/2019/04/record-store-day-.jpg");
+        body {
+        background-image:  url("https://www.poblenouurbandistrict.com/wp-content/uploads/2019/04/record-store-day-.jpg");
         font-family: 'Averta', sans-serif;
         }
 </style>
