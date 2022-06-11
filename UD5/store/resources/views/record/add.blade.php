@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
 
-    <h2>Detalles Disco nº {{$record->id}}</h2>
+    <h1>Detalles Disco nº {{$record->id}}</h1>
 
 
     <ul>
@@ -38,7 +38,7 @@
         </li>
     </ul>
     <a href="/records" class="btn btn-primary float-right">
-                Volver al Catálogo de Discos
+                Volver al Catálogo
     </a>  
     </div>
 </div>

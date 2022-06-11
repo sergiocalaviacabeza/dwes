@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
 
-    <h1>Grupo nº {{$band->id}}</h1>
+    <h3>Grupo código BD RecordStore {{$band->id}}</h3>
 
 
     <ul>
@@ -21,7 +21,7 @@
             {{ $band->country }}
         </li>
         <hr>
-        <h3>Discos a la venta</h3>
+        <h3>Discos a la venta de {{ $band->name }}</h3>
 
         @foreach($band->records as $record)
             <li>{{$record->title}}</li>

@@ -38,8 +38,8 @@
                 <td>{{$record->price}} </td>
                 <td> <a href="/records/{{$record->id}}" class="btn btn-success float-right">Ver</a></td>
                 <td> <a href="/records/{{$record->id}}/edit" class="btn btn-success float-right">Editar</a></td>
-                <td> <a href="/baskets/add" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
-                <td> <a href="/baskets/{{$record->id}}/show" class="btn btn-success float-right">CESTA</a></td>
+                <td> <a href="/records/{{$record->id}}/show" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
+                <td> <a href="/records/{{$record->id}}/show" class="btn btn-success float-right">CESTA</a></td>
             </tr>
             @empty
             <tr>

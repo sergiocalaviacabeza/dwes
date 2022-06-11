@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Record;
 use App\Models\Band;
 use Illuminate\Http\Request;
+use Session;
 
 class RecordController extends Controller
 {
@@ -91,6 +92,18 @@ class RecordController extends Controller
         $record->fill($request->all());
         $record->save();
         return redirect('/records');
+    }
+
+    public function add(Record $record)
+    {
+        $bands = Band::all();
+        echo "voy a guardar un dato en la sesión";
+        echo($record->id);
+        session(['record'=>$record]); //guardar un objeto en la sesión
+        echo"voy a recuperarlo para ver que se ha guardado bien";
+        $recordRec = session('record');
+        echo($recordRec->code);
+        return view('record.add',["bands" => $bands], ['record'=> $record]);
     }
 
     /**
