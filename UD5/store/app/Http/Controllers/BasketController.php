@@ -15,15 +15,32 @@ class BasketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+    public function add()
+    {
+        /*if(Session::has('basket'){
+            $basket = Session::get(
+        } else {
+            $basket = array()
+        }
+        //añado atributo units para llevar recuento de cuantos productos iguales quiero.
+        //al inicio 1
+        if(isset($basket[$record->id]) {
+            $record->units++
+        } else {
+            $record->units=1
+        }
+        $basket[$record->id] = $record;
+        Session::put('basket', $basket)
+        return back();
+        */
+    }
     public function index(Request $request)
     {
         //
     }
 
-    public function add(Record $record)
-    {
-        
-    }
+    
 
     /**
      * Show the form for creating a new resource.
