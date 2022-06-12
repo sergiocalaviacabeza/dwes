@@ -55,7 +55,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="3">No hay grupos registrados</td>
+                    <td colspan="3">No hay grupos registrados que correspondan con la búsqueda</td>
                 </tr>
                 @endforelse
             </table>

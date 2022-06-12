@@ -64,7 +64,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="3">No hay discos registrados</td>
+                    <td colspan="3">No hay discos registrados que correspondan con la búsqueda</td>
                 </tr>
                 @endforelse
             </table>
