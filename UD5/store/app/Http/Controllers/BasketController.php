@@ -16,7 +16,7 @@ class BasketController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function add()
+    public function add(Record $record)
     {
         /*if(Session::has('basket'){
             $basket = Session::get(

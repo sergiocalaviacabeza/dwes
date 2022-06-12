@@ -4,6 +4,7 @@
 
 <style type="text/css">
     body {
+        background-image: url("https://www.poblenouurbandistrict.com/wp-content/uploads/2019/04/record-store-day-.jpg");
         font-family: 'Averta', sans-serif;
     }
 </style>
@@ -13,12 +14,8 @@
     <div class="card-body">
 
 
-        <h2>CATÁLOGO RECORDSTORE - CARRO DE LA COMPRA
-        </h2>
-
-        <a href="/records/create" class="btn btn-success float-right">
-            Añadir Nuevo Disco
-        </a><br><br>
+        <h4><strong>Detalles Pedido - Carro Compra</strong>
+        </h4>
 
         <table class="table table-striped">
             <tr>
@@ -58,23 +55,16 @@
         </table>
         <hr>
         <br>
-
-        <h4>Búsqueda de discos por título (filtro por palabras)</h4>
-
-        <br><br>
-        <form action="/records/filter" method="get" id="formulario">
-            <input type="text" id="filtro" name="filtro">
-            <input type="submit">
-            <br><br>
-        </form>
+        <a href="/order" class="btn btn-success float-right">
+            CONFIRMAR PEDIDO
+        </a>
+        <br>
         <hr>
-        <br><br>
-        <h4>Búsqueda por nombre de grupo (filtro por palabras)</h4>
-        <br><br>
-        <form action="/bands/filter2" method="get" id="formulario">
-            <input type="text" id="filtro" name="filtro">
-            <input type="submit">
-        </form>
+        <hr>
+        <br>
+        <a href="/records" class="btn btn-primary float-right">
+            Volver a Catálogo Discos
+        </a>
         <br>
         <hr>
         <br>

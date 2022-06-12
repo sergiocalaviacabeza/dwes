@@ -75,7 +75,8 @@
             <br>
         </form>
 
-
+        <a href="/orders" class="btn btn-success float-right">Volver a la CESTA</a>
+        <hr>
         <a href="/records" class="btn btn-primary float-right">
             Volver a Catálogo de Discos
         </a>

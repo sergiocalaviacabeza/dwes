@@ -13,8 +13,8 @@
     <div class="card-body">
 
 
-        <h2>CATÁLOGO RECORDSTORE - Lista de Discos a la venta
-        </h2>
+        <h3><strong>CATÁLOGO RECORDSTORE - Lista de Discos a la venta</strong>
+        </h3>
 
         <a href="/records/create" class="btn btn-success float-right">
             Añadir Nuevo Disco
@@ -44,9 +44,9 @@
                 <td>{{$record->format}} </td>
                 <td>{{$record->condition}} </td>
                 <td>{{$record->price}} </td>
-                <td> <a href="/records/{{$record->id}}" class="btn btn-success float-right">Ver</a></td>
+                <td> <a href="/orders/{{$record->id}}" class="btn btn-success float-right">cesto</a></td>
                 <td> <a href="/records/{{$record->id}}/edit" class="btn btn-success float-right">Editar</a></td>
-                <td> <a href="/orders/{{$record->id}}" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
+                <td> <a href="/records/{{$record->id}}" class="btn btn-success float-right">AÑADIR CESTA</a></td>
                 <td> <a href="/orders" class="btn btn-success float-right">VER CESTA</a></td>
             </tr>
             @empty
