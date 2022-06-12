@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row justify-content-center">
 
-    <h1>Usuario - Cliente nº {{$user->id}}</h1>
+    <h3><strong>Cliente nº {{$user->id}}</strong></h3>
 
 
     <ul>
@@ -37,7 +37,7 @@
             {{ $user->rol }}
         </li>
         <hr>
-        <h3>Pedidos</h3>
+        <h3><strong>Pedidos</strong></h3>
         
     </ul>
     <a href="/users" class="btn btn-primary float-right">

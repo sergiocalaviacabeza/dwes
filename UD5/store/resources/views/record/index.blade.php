@@ -89,7 +89,7 @@
             <hr>
             <br>
             <a href="/bands" class="btn btn-primary float-right">
-                Volver a Grupos
+                Volver a Catálogo por Grupos
             </a>
             <hr>
             <a href="/home" class="btn btn-primary float-right">
@@ -102,9 +102,11 @@
 
 <footer>
     <div class="card-body">
+    <h5><strong>RECORDSTORE</strong></h5>
+    <h6>C/ Independencia - Zaragoza</h6>
+    <h6>976757070 - info@recordstore.com</h6>
         <img src="https://www.recordstoreday.es/images/logos/logo-RSDS-HalfVinyl-small.jpg">
     </div>
-
 </footer>
 
 </html>
