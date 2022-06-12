@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row justify-content-center">
 
-        <h4>Insertar Disco</h4>
+        <h4>Insertar Disco al Catálogo</h4>
 
         <form action="/records" method="post">
             <div>

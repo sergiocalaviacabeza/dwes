@@ -46,7 +46,6 @@
                 <td>{{$record->price}} </td>
                 <td> <a href="/records/{{$record->id}}" class="btn btn-success float-right">Ver</a></td>
                 <td> <a href="/records/{{$record->id}}/edit" class="btn btn-success float-right">Editar</a></td>
-                <td> <a href="/records/{{$record->id}}/destroy" class="btn btn-success float-right">Borrar</a></td>
                 <td> <a href="/records/{{$record->id}}/add" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
                 <td> <a href="/baskets" class="btn btn-success float-right">CESTA</a></td>
             </tr>
