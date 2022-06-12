@@ -23,9 +23,7 @@
                         </div>
                     @endif
 
-                    {{ __('TU TIENDA ONLINE') }}
-                    <br>
-                    <br>
+                    <h4><strong>Tu tienda on-line</strong></h4>
                     <a href="records" class="btn btn-success float-right">Gestión - Ver Catálogo de Discos</a>
                     <br>
                     <br>
@@ -33,6 +31,9 @@
                     <br>
                     <br>
                     <a href="users" class="btn btn-success float-right">Ver Clientes</a>
+                    <br>
+                    <br>
+                    <h4>Contacto: <strong>info@recordstore.com</strong></h4>
                 </div>
             </div>
         </div>

@@ -425,7 +425,6 @@
                     <div class="card-header">
                         <h1><strong>RECORDSTORE</strong></h1>
                         <h4>Tu tienda especializada en discos de vinilo nuevos y de segunda mano</h4>
-
                     </div>
                 </div>
             </div>
