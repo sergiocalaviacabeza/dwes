@@ -1,18 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
 @extends('layouts.app')
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecordStore</title>
+</head>
 
 @section('content')
 
-<style type="text/css">   
-        body {
+<style type="text/css">
+    body {
         font-family: 'Averta', sans-serif;
-        }
+    }
+
+    footer {
+        background-color: #2b2b2b;
+        color: white;
+        text-align: center;
+    }
 </style>
 
 <div class="container">
     <div class="card-body">
 
-        <h1>Lista de Grupos
-        </h1>
+        <h3><strong>Gestión de la Lista de Grupos</strong>
+        </h3>
 
         <a href="/bands/create" class="btn btn-primary float-right">
             Añadir Nuevo Grupo
@@ -55,31 +69,39 @@
         <hr>
         <br>
 
-        <h4>Búsqueda por título de disco (filtro por palabras)</h4>
-
-        <br><br>
+        <h4><strong>Búsqueda por título de disco (filtro por palabras)</strong></h4>
+        <br>
         <form action="/records/filter" method="get" id="formulario">
             <input type="text" id="filtro" name="filtro">
             <input type="submit">
-            <br><br>
         </form>
         <hr>
-        <br><br>
-        <h4>Búsqueda por nombre de grupo (filtro por palabras)</h4>
-        <br><br>
+        <br>
+        <h4><strong>Búsqueda por nombre grupo (filtro por palabras)</strong></h4>
+        <br>
         <form action="/bands/filter2" method="get" id="formulario">
             <input type="text" id="filtro" name="filtro">
             <input type="submit">
         </form>
-        <br>
     </div>
+    <hr>
+    <a href="/home" class="btn btn-primary float-right">
+    Volver a HOME - INICIO
+</a>
 </div>
 </div>
-<hr>
 <br>
-<a href="/home" class="btn btn-primary float-right">
-            Volver a HOME - INICIO
-        </a>
 </div>
 </div>
+</body>
+
+<footer>
+    <div class="card-body">
+        <img src="https://www.recordstoreday.es/images/logos/logo-RSDS-HalfVinyl-small.jpg">
+        
+    </div>
+
+</footer>
+
+</html>
 @endsection
