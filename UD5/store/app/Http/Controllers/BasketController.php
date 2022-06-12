@@ -37,7 +37,9 @@ class BasketController extends Controller
     }
     public function index(Request $request)
     {
-        //
+        $records = Record::all();
+
+        return view('basket.index',['records'=>$records]);
     }
 
     

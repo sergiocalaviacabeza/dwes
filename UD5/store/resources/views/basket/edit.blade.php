@@ -65,16 +65,11 @@
                 <input type="submit" class="btn btn-success float-right" value="ACTUALIZAR">
             </div>
             <br>
-        </form>
-
-        <form action="/records/{{$record->id}}" method="post">
-            @csrf
-            <input type="hidden" name="_method" value="DELETE">
-            <input type="submit" class="btn btn-success float-right" value="ELIMINAR DISCO">
+            <br>
+            <br>
             <br>
             <br>
         </form>
-
 
         <a href="/records" class="btn btn-primary float-right">
             Volver a Catálogo de Discos

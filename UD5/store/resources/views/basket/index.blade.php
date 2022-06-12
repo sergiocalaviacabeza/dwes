@@ -13,7 +13,7 @@
     <div class="card-body">
 
 
-        <h2>CATÁLOGO RECORDSTORE - Lista de Discos a la venta
+        <h2>CATÁLOGO RECORDSTORE - CARRO DE LA COMPRA
         </h2>
 
         <a href="/records/create" class="btn btn-success float-right">
@@ -48,7 +48,7 @@
                 <td> <a href="/records/{{$record->id}}/edit" class="btn btn-success float-right">Editar</a></td>
                 <td> <a href="/records/{{$record->id}}/destroy" class="btn btn-success float-right">Borrar</a></td>
                 <td> <a href="/records/{{$record->id}}/add" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
-                <td> <a href="/baskets" class="btn btn-success float-right">CESTA</a></td>
+                <td> <a href="/records/index" class="btn btn-success float-right">CESTA</a></td>
             </tr>
             @empty
             <tr>
