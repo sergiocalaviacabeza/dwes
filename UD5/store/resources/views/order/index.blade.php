@@ -74,6 +74,6 @@
         <a href="/home" class="btn btn-primary float-right">
             Volver a HOME - INICIO
         </a>
-    </div>               
+    </div>
 </div>
 @endsection
