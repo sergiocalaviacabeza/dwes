@@ -408,6 +408,7 @@
         body {
             background-image: url("https://c8.alamy.com/compes/kw138b/delante-de-la-tienda-boo-hoo-records-vintage-record-store-junto-northam-road-northam-southampton-reino-unido-kw138b.jpg");
             font-family: 'Averta', sans-serif;
+            text-align: center;
         }
 
         .card {
@@ -421,40 +422,18 @@
 
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('BIENVENIDO A RECORDSTORE TU TIENDA ESPECIALIZADA EN DISCOS DE VINILO NUEVOS Y DE SEGUNDA MANO') }}
+                    <div class="card-header">
+                        <h1><strong>RECORDSTORE</strong></h1>
+                        <h4>Tu tienda especializada en discos de vinilo nuevos y de segunda mano</h4>
 
-                    </div>
-
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('login') }}">
-                            @csrf
-
-                            <div class="row mb-3">
-                                <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('') }}</label>
-                                <br>
-
-                                <a href="/records" class="btn btn-success float-right">ENTRAR EN TU CUENTA DE CLIENTE</a>
-
-                            </div>
-
-                            <div class="row mb-3">
-                                <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('') }}</label>
-                                <br>
-
-                                <a href="/register" class="btn btn-success float-right">REGISTRO NUEVO CLIENTE</a>
-                            </div>
-
-
-
-                        </form>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="row mb-3">
                     <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('') }}</label>
-                    <a href="https://blogspot.us3.list-manage.com/track/click?u=18c142784b1b06cc866435f94&id=cd6a8fd277&e=3ed4208a3a" class="btn btn-success float-right">Aquí el Catálogo RecordStore en solo un click</a>
+                    <a href="https://blogspot.us3.list-manage.com/track/click?u=18c142784b1b06cc866435f94&id=cd6a8fd277&e=3ed4208a3a" class="btn btn-success float-right">Descárgate Catálogo en un click</a>
 
                 </div>
             </div>
