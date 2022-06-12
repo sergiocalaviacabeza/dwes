@@ -71,22 +71,20 @@
             <hr>
             <br>
 
-            <h4>Búsqueda de discos por título (filtro por palabras)</h4>
-
-            <br><br>
-            <form action="/records/filter" method="get" id="formulario">
-                <input type="text" id="filtro" name="filtro">
-                <input type="submit">
-                <br><br>
-            </form>
-            <hr>
-            <br><br>
-            <h4>Búsqueda por nombre de grupo (filtro por palabras)</h4>
-            <br><br>
-            <form action="/bands/filter2" method="get" id="formulario">
-                <input type="text" id="filtro" name="filtro">
-                <input type="submit">
-            </form>
+            <h4><strong>Búsqueda por título de disco (filtro por palabras)</strong></h4>
+        <br>
+        <form action="/records/filter" method="get" id="formulario">
+            <input type="text" id="filtro" name="filtro">
+            <input type="submit">
+        </form>
+        <hr>
+        <br>
+        <h4><strong>Búsqueda por nombre grupo (filtro por palabras)</strong></h4>
+        <br>
+        <form action="/bands/filter2" method="get" id="formulario">
+            <input type="text" id="filtro" name="filtro">
+            <input type="submit">
+        </form>
             <br>
             <hr>
             <br>
