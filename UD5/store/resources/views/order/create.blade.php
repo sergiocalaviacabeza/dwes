@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row justify-content-center">
 
-        <h4>Insertar Disco</h4>
+        <h2>¡¡MUCHAS GRACIAS POR TU PEDIDO!!</h2>
 
         <form action="/records" method="post">
             <div>
@@ -67,7 +67,9 @@
         </form>
     </div>
 </div>
-<br>
+<a href="/home" class="btn btn-primary float-right">
+    Volver a INICIO - HOME</a>
+<br><br>
 <a href="/records" class="btn btn-primary float-right">Volver a Catálogo Discos</a>
 <br><br>
 <a href="/bands" class="btn btn-primary float-right">

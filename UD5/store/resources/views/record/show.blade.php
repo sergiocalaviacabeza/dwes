@@ -46,6 +46,9 @@
             {{ $record->price }}
         </li>
     </ul>
+    
+    <a href="/orders" class="btn btn-success float-right">Volver a la CESTA</a>
+    <hr>
     <a href="/records" class="btn btn-primary float-right">
                 Volver al Catálogo de Discos</a>
     <br>

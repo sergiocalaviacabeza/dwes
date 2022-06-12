@@ -32,7 +32,7 @@ class OrderController extends Controller
     {
         
         $bands = Band::all();
-        return view('record.create', ["bands" => $bands]);
+        return view('order.create', ["bands" => $bands]);
     }
 
     /**

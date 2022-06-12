@@ -41,11 +41,9 @@
                 <td>{{$record->format}} </td>
                 <td>{{$record->condition}} </td>
                 <td>{{$record->price}} </td>
-                <td> <a href="/records/{{$record->id}}" class="btn btn-success float-right">Ver</a></td>
-                <td> <a href="/records/{{$record->id}}/edit" class="btn btn-success float-right">Editar</a></td>
-                <td> <a href="/records/{{$record->id}}/destroy" class="btn btn-success float-right">Borrar</a></td>
-                <td> <a href="/records/{{$record->id}}/add" class="btn btn-success float-right">AÑADIR A CESTA</a></td>
-                <td> <a href="/records/index" class="btn btn-success float-right">CESTA</a></td>
+                <td> <a href="/records/{{$record->id}}" class="btn btn-success float-right">Añadir Cesta</a></td>
+                <td> <a href="/records/{{$record->id}}/edit" class="btn btn-success float-right">Eliminar de la Cesta</a></td>
+                <td> <a href="/orders" class="btn btn-success float-right">CESTA</a></td>
             </tr>
             @empty
             <tr>
@@ -55,7 +53,7 @@
         </table>
         <hr>
         <br>
-        <a href="/order" class="btn btn-success float-right">
+        <a href="/orders/create" class="btn btn-success float-right">
             CONFIRMAR PEDIDO
         </a>
         <br>
