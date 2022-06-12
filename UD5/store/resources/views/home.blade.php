@@ -23,13 +23,13 @@
                     {{ __('TU TIENDA ONLINE') }}
                     <br>
                     <br>
-                    <a href="records" class="btn btn-primary float-right">Ver Catálogo de Discos</a>
+                    <a href="records" class="btn btn-success float-right">Ver Catálogo de Discos - Gestión</a>
                     <br>
                     <br>
-                    <a href="bands" class="btn btn-primary float-right">Acceso Gestión Catálogo</a>
+                    <a href="bands" class="btn btn-success float-right">Acceso Gestión Catálogo - Grupos</a>
                     <br>
                     <br>
-                    <a href="users" class="btn btn-primary float-right">Ver Clientes</a>
+                    <a href="users" class="btn btn-success float-right">Ver Clientes</a>
                 </div>
             </div>
         </div>
