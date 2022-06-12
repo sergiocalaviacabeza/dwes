@@ -4,7 +4,7 @@
 
 <style type="text/css">
     body {
-        background-image: url("https://media.istockphoto.com/vectors/shopping-cart-and-vinyl-record-icon-vector-id1131802904");
+        background-image: url("https://www.poblenouurbandistrict.com/wp-content/uploads/2019/04/record-store-day-.jpg");
         font-family: 'Averta', sans-serif;
     }
 </style>
@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row justify-content-center">
 
-    <h5>¡¡Has añadido al carro el Disco <strong>{{$record->title}}</strong>!!</h5>
+    <h3>¡¡Has añadido al carro el Disco <strong>{{$record->title}}</strong>!!</h3>
     <hr>
     <h6><strong>Detalles</strong></h6>
     <hr>

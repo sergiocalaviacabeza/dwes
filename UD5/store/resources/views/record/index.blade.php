@@ -15,7 +15,7 @@
         font-family: 'Averta', sans-serif;
     }
 
-    footer{
+    footer {
         background-color: #2b2b2b;
         color: white;
         text-align: center;
@@ -72,19 +72,19 @@
             <br>
 
             <h4><strong>Búsqueda por título de disco (filtro por palabras)</strong></h4>
-        <br>
-        <form action="/records/filter" method="get" id="formulario">
-            <input type="text" id="filtro" name="filtro">
-            <input type="submit">
-        </form>
-        <hr>
-        <br>
-        <h4><strong>Búsqueda por nombre grupo (filtro por palabras)</strong></h4>
-        <br>
-        <form action="/bands/filter2" method="get" id="formulario">
-            <input type="text" id="filtro" name="filtro">
-            <input type="submit">
-        </form>
+            <br>
+            <form action="/records/filter" method="get" id="formulario">
+                <input type="text" id="filtro" name="filtro">
+                <input type="submit">
+            </form>
+            <hr>
+            <br>
+            <h4><strong>Búsqueda por nombre grupo (filtro por palabras)</strong></h4>
+            <br>
+            <form action="/bands/filter2" method="get" id="formulario">
+                <input type="text" id="filtro" name="filtro">
+                <input type="submit">
+            </form>
             <br>
             <hr>
             <br>
@@ -102,9 +102,9 @@
 
 <footer>
     <div class="card-body">
-    <h5><strong>RECORDSTORE</strong></h5>
-    <h6>C/ Independencia - Zaragoza</h6>
-    <h6>976757070 - info@recordstore.com</h6>
+        <h5><strong>RECORDSTORE</strong></h5>
+        <h6>C/ Independencia - Zaragoza</h6>
+        <h6>976757070 - info@recordstore.com</h6>
         <img src="https://www.recordstoreday.es/images/logos/logo-RSDS-HalfVinyl-small.jpg">
     </div>
 </footer>
