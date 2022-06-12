@@ -2,18 +2,19 @@
 
 @section('content')
 
-<style type="text/css">   
-        body {
+<style type="text/css">
+    body {
+        background-image: url("https://www.poblenouurbandistrict.com/wp-content/uploads/2019/04/record-store-day-.jpg");
         font-family: 'Averta', sans-serif;
-        }
+    }
 </style>
 
 <div class="container">
     <div class="row justify-content-center">
 
-    <h1>Detalles Disco nº {{$record->id}}</h1>
+    <h4>Añadido al carrito RecordStore Disco código nº{{$record->id}}</h4>
 
-
+    <hr>
     <ul>
         <li>
             <strong>Grupo</strong>
@@ -45,11 +46,12 @@
         </li>
     </ul>
     <a href="/records" class="btn btn-primary float-right">
-                Volver al Catálogo de discos
-    </a>  
+                Volver al Catálogo de Discos</a>
+    <br>
+    <br>
+    <hr>
     <a href="/bands" class="btn btn-primary float-right">
-                Volver a Grupos
-    </a>  
+                Volver a Grupos</a>  
     </div>
 </div>
 @endsection

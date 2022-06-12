@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Order;
-use App\Models\Record;
 use App\Models\User;
+use App\Models\Record;
+use App\Models\Band;
+use Illuminate\Support\Facades\Session;
 
 class OrderController extends Controller
 {
@@ -16,8 +18,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::all();
-        return view("orders.index", ["orders" => $orders]);
+        $records = Record::all();
+
+        return view('order.index',['records'=>$records]);
     }
 
     /**
@@ -27,8 +30,9 @@ class OrderController extends Controller
      */
     public function create()
     {
-        $records = Record::all();
-        return view("bookings.create", ["records" => $records]);
+        
+        $bands = Band::all();
+        return view('record.create', ["bands" => $bands]);
     }
 
     /**
@@ -39,7 +43,19 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $rules = [
+            'title'=>'required',
+            'code'=> 'required|max:20',
+            'year'=>'required',
+            'format'=>'required',
+            'condition'=>'required',
+            'price'=>'required'
+        ];
+        $request->validate($rules);
+        $record = Record::create($request->all());
+
+        return redirect ('/records');
     }
 
     /**
@@ -48,9 +64,10 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Record $record)
     {
-        //
+        $bands = Band::all();
+        return view('record.show',["bands" => $bands],['record'=>$record]);
     }
 
     /**
@@ -59,9 +76,10 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Record $record)
     {
-        //
+        $bands = Band::all();
+        return view('record.edit',["bands" => $bands], ['record'=> $record]);
     }
 
     /**
@@ -71,9 +89,11 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Record $record)
     {
-        //
+        $record->fill($request->all());
+        $record->save();
+        return redirect('/records');
     }
 
     /**

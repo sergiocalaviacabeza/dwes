@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Record;
 use App\Models\Band;
 use Illuminate\Http\Request;
-use Session;
+use Illuminate\Support\Facades\Session;
 
 class RecordController extends Controller
 {
@@ -14,6 +14,15 @@ class RecordController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    /* Este método sirve para restringir el acceso a los métodos
+    
+    public function __construct()
+    {
+        $this->middleware('client')->except('create','store','edit','update');
+    } 
+    */
+
     public function index()
     {
         $records = Record::all();
