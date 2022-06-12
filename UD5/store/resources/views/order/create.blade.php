@@ -4,75 +4,48 @@
 
 <style type="text/css">
     body {
-        background-image: url("https://www.poblenouurbandistrict.com/wp-content/uploads/2019/04/record-store-day-.jpg");
+        background-image: url("https://d30l99xc13l2t1.cloudfront.net/media/defacto_blog/cache/1200/R/S/1869-RSD_image_1.jpg");
         font-family: 'Averta', sans-serif;
     }
 </style>
 
+
+<br><br>
+
+<br><br>
+
+
 <div class="container">
-    <div class="row justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        
+                        <h1><strong>¡¡¡MUCHAS GRACIAS POR TU PEDIDO!!!</strong></h1>
 
-        <h2>¡¡MUCHAS GRACIAS POR TU PEDIDO!!</h2>
+                    </div>
 
-        <form action="/records" method="post">
-            <div>
-                @csrf
-                <label>Grupo: </label><select name="band_id">
-                    @foreach($bands as $band)
-                    <option value="{{ $band->id }}">{{ $band->name }}</option>
-                    @endforeach
-                </select>
-                @error('band_id')
-                <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
+                    <div class="card-body">
+               
+                        
+                        <div class="card-header">{{ __('En breve nos pondremos en contacto para confirmarte el total y los discos. Cualquier duda escribe a: admin@recordstore / móvil 666707590') }}
+                        
+
+                    </div>
+                </div>
             </div>
-            <br>
-            <div>
-                <label for="title">Título</label>
-                <input type="text" name="title">
-            </div>
-            <br>
-            <div>
-                <label for="code">Código</label>
-                <input type="text" name="code">
-            </div>
-            <br>
-            <div>
-                <label for="year">Año</label>
-                <input type="text" name="year">
-            </div>
-            <br>
-            <div>
-                <label for="format">Formato</label>
-                <input type="text" name="format">
-            </div>
-            <br>
-            <div>
-                <label for="condition">Estado</label>
-                <input type="text" name="condition">
-            </div>
-            <br>
-            <div>
-                <label for="price">Precio</label>
-                <input type="text" name="price">
-            </div>
-            <br>
-            <div>
-                <input type="submit" class="btn btn-success float-right" value="INSERTAR">
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-        </form>
-    </div>
+        </div>
+        </div>        
 </div>
-<a href="/home" class="btn btn-primary float-right">
-    Volver a INICIO - HOME</a>
+
+<a href="/home" class="btn btn-success float-right">
+Volver a INICIO - HOME</a>
 <br><br>
-<a href="/records" class="btn btn-primary float-right">Volver a Catálogo Discos</a>
+<a href="/records" class="btn btn-success float-right">Volver a Catálogo Discos</a>
 <br><br>
-<a href="/bands" class="btn btn-primary float-right">
+<a href="/bands" class="btn btn-success float-right">
     Volver a Grupos</a>
-</div>
+
+
+
 @endsection
